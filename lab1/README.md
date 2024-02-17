@@ -60,3 +60,69 @@ To write a JUnit 5 unit test, we need to follow these steps:
 6. We can use the `@Disabled` annotation to disable a test class or test method;
 
 7. In order to assert the expected result of a test, we use the `Assertions` class that can be imported from `org.junit.jupiter.api.Assertions`. This has method to check for equality, nullity, exceptions, if a condition is true/false, etc.
+
+## JaCoCo
+
+**JaCoCo** is a free code coverage library for Java. It is used to measure how many lines, branches, and cyclomatic complexity of the code are executed during automated tests.
+
+### How to use JaCoCo with Maven
+
+1. Add the JaCoCo plugin to the `pom.xml` file
+
+```xml
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.8</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
+
+Running the test using JUnit will automatically set in motion the JaCoCo agent. It will create a coverage report in binary format in the target directory, target/jacoco.exec.
+Obviously we can’t interpret the output single-handedly, but other tools and plugins can, e.g. Sonar Qube.
+The good news is that we can use the jacoco:report goal in order to generate readable code coverage reports in several formats, like HTML, CSV, and XML.
+
+2. Create a report
+
+```bash
+$ mvn clean test jacoco:report
+```
+
+You should get an HTML report under target/site/jacoco/index.html.
+
+### Analyzing the report
+
+Overall coverage:
+
+![](img/jacoco-base.png)
+
+Class coverage:
+
+![](img/jacoco-class-1.png)
+
+![](img/jacoco-class-2.png)
+
+#### Which classes/methods offer less coverage? Are all possible [decision] branches being covered?
+
+First, the `CuponEuromillions` class has a low coverage in the **countDips()** and **format()** methods. These have no unit tests.
+
+Second, the `Dip` class has a low coverage in the **hashCode()** and
+**equals()** methods. In the **equals()** method, there are no tests to cover all the if statements, only when it does not enter any of them. The **hashCode()** method, does not have any unit tests.
+
+Third, the `EuromillionsDraw` class has a low coverage in the **generateRandomDraw()** and **getDrawResults()** methods. These two have no unit tests.
+
+Finnaly, the `BoundedSetOfNaturals` class has a coverage of 54% and only 50% of the decision branches (if statments) are being covered. The methods
+**fromArray()**, **hashCode()**, **size()** and **intersects()** have no unit tests, the **add()** method has 56% of coverage and only 50% of the decision branches are being covered, and the **equals()** method has 76% of coverage and only 50% of the decision branches are being covered.
