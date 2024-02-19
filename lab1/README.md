@@ -126,3 +126,23 @@ Third, the `EuromillionsDraw` class has a low coverage in the **generateRandomDr
 
 Finnaly, the `BoundedSetOfNaturals` class has a coverage of 54% and only 50% of the decision branches (if statments) are being covered. The methods
 **fromArray()**, **hashCode()**, **size()** and **intersects()** have no unit tests, the **add()** method has 56% of coverage and only 50% of the decision branches are being covered, and the **equals()** method has 76% of coverage and only 50% of the decision branches are being covered.
+
+#### What kind of unit test are worth writing for proper validation of BoundedSetOfNaturals?
+
+1. **testAddElement()** - In this test we check if the element is added to the set and if the size of the set is incremented by 1. Also tested what happens when we try to add an element that already exists in the set, add a non-natural number and add more elements than the maximum size of the set (should throw an exception).
+
+2. **testAddFromBadArray()** - This test is similar to the previous one, but instead of adding elements one by one, we add an array of elements. We test the same cases as the previous test.
+
+3. **testIntersection()** - In this test we check if the intersection of two sets is correct. We test the intersection of two sets that have no elements in common, two sets that have all elements in common, two sets that have some elements in common and two sets that are the same.
+
+#### Before the changes
+
+![](img/jacoco-before-change-1.png)
+
+![](img/jacoco-before-change-2.png)
+
+#### After the changes
+
+![](img/jacoco-after-change-1.png)
+
+![](img/jacoco-after-change-2.png)
