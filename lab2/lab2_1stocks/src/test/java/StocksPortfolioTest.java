@@ -44,6 +44,6 @@ public class StocksPortfolioTest {
         assertThat(totalValue, is(18.0));
 
         // verify the use of the mock (verify)
-        verify(stockmarketService, times(2)).lookUpPrice(anyString());
+        verify(stockmarketService, times(2)).lookUpPrice(anyString()); // not necessary for the success of the test, but it tests the behaviour of the stub
     }
 }
