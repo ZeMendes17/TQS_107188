@@ -1,4 +1,4 @@
-package pt.ua.deti.lab3_2carService.entity;
+package pt.ua.deti.lab3_2carService.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
