@@ -39,11 +39,11 @@ public class CarServiceTest {
 
         // mock the behavior of the carRepository
         when(carRepository.findAll()).thenReturn(allCars);
-        when(carRepository.findByCarId(1L)).thenReturn(car);
-        when(carRepository.findByCarId(2L)).thenReturn(car2);
-        when(carRepository.findByCarId(3L)).thenReturn(car3);
+        when(carRepository.findById(car.getCarId())).thenReturn(Optional.of(car));
+        when(carRepository.findById(car2.getCarId())).thenReturn(Optional.of(car2));
+        when(carRepository.findById(car3.getCarId())).thenReturn(Optional.of(car3));
         // give a wrong ID to the repository
-        when(carRepository.findByCarId(4L)).thenReturn(null);
+        when(carRepository.findById(4L)).thenReturn(null);
     }
 
     // Test implementations
@@ -61,7 +61,7 @@ public class CarServiceTest {
     @Test
     public void whenInvalidId_thenCarShouldNotBeFound() {
         Long carId = 4L;
-        Car found = carManagerService.getCarDetails(carId).orElse(null);
+        Optional<Car> found = carManagerService.getCarDetails(carId);
 
         assertThat(found).isNull();
 
@@ -86,7 +86,7 @@ public class CarServiceTest {
 
 
     private void verifyFindByIdIsCalledOnce() {
-        verify(carRepository, times(1)).findByCarId(anyLong());
+        verify(carRepository, times(1)).findById(anyLong());
     }
 
     private void verifyFindAllCarsIsCalledOnce() {
