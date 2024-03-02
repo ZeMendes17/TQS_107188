@@ -1,6 +1,5 @@
 package pt.ua.deti.lab3_2carService.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,10 +10,8 @@ public class Car {
     @GeneratedValue
     private Long carId;
 
-    @Column
     private String maker;
 
-    @Column
     private String model;
 
     // empty contructor
@@ -54,13 +51,12 @@ public class Car {
         if (this == other) return true;
         if (other == null || getClass() != other.getClass()) return false;
         Car car = (Car) other;
-        return carId.equals(car.carId) && maker.equals(car.maker) && model.equals(car.model);
+        return maker.equals(car.maker) && model.equals(car.model);
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + (carId == null ? 0 : carId.hashCode());
         hash = 31 * hash + (maker == null ? 0 : maker.hashCode());
         hash = 31 * hash + (model == null ? 0 : model.hashCode());
         return hash;
