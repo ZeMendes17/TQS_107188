@@ -71,7 +71,7 @@ public class CarRestControllerTemplateIT {
 
 
     private void createTestCar(String maker, String model) {
-        Car car = new Car(model, maker);
+        Car car = new Car(maker, model);
         carRepository.saveAndFlush(car);
     }
 }
