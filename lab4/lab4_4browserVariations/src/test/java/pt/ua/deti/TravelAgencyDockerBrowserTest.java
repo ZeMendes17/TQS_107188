@@ -7,7 +7,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import static io.github.bonigarcia.seljup.BrowserType.OPERA;
+import static io.github.bonigarcia.seljup.BrowserType.CHROME;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(SeleniumJupiter.class)
@@ -16,7 +16,7 @@ public class TravelAgencyDockerBrowserTest {
     private static final String URL = "https://blazedemo.com/";
 
     @Test
-    public void travelAgencyDockerBrowserTest(@DockerBrowser(type = OPERA)RemoteWebDriver driver) {
+    public void travelAgencyDockerBrowserTest(@DockerBrowser(type = CHROME)RemoteWebDriver driver) {
         travelAgencyPage = new TravelAgencyPage(driver);
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1800, 1000));
