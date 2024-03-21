@@ -12,7 +12,7 @@ import tqs.euromillions.Dip;
 /**
  * @author ico0
  */
-public class DipTest {
+class DipTest {
 
     private Dip sampleInstance;
 
@@ -29,14 +29,14 @@ public class DipTest {
 
     @DisplayName("format as string show all elements")
     @Test
-    public void testFormat() {
+    void testFormat() {
         String result = sampleInstance.format();
         assertEquals("N[ 10 20 30 40 50] S[  1  2]", result, "format as string: formatted string not as expected. ");
     }
 
     @DisplayName("new Dip rejects wrong size ou negatives")
     @Test
-    public void testConstructorFromBadArrays() {
+    void testConstructorFromBadArrays() {
 
         // insufficient args
         assertThrows(IllegalArgumentException.class,
@@ -53,7 +53,7 @@ public class DipTest {
 
     @DisplayName("new Dip rejects out of range elements")
     @Test
-    public void testConstructorFromBadRanges() {
+    void testConstructorFromBadRanges() {
         // creating Dip with numbers or starts outside the expected range
         // expects an exception
         assertThrows(IllegalArgumentException.class,

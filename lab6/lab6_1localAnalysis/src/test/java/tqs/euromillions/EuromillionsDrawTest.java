@@ -7,7 +7,7 @@ import tqs.euromillions.CuponEuromillions;
 import tqs.euromillions.Dip;
 import tqs.euromillions.EuromillionsDraw;
 
-public class EuromillionsDrawTest {
+class EuromillionsDrawTest {
 
     private CuponEuromillions sampleCoupon;
 
@@ -22,7 +22,7 @@ public class EuromillionsDrawTest {
 
     @DisplayName("reports correct matches in a coupon")
     @Test
-    public void testCompareBetWithDrawToGetResults() {
+    void testCompareBetWithDrawToGetResults() {
         Dip winningDip, matchesFound;
 
         // test for full match, using the 3rd dip in the coupon as the Draw results

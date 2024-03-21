@@ -1,13 +1,10 @@
 package tqs.euromillions;
 
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Objects;
 
 import tqs.sets.BoundedSetOfNaturals;
-
-import java.util.Random;
 
 /**
  * A set of 5 numbers and 2 starts according to the Euromillions ranges.
@@ -15,7 +12,7 @@ import java.util.Random;
  * @author ico0
  */
 public class Dip {
-    static Random generator = new Random();
+    static SecureRandom generator = new SecureRandom();
     public static final int NUMBERS_RANGE_MAX = 50;
     public static final int STARS_RANGE_MAX = 10;
     public static final int NUMBERS_REQUIRED = 5;
@@ -61,18 +58,16 @@ public class Dip {
 
 
         Dip randomDip = new Dip();
-        for (int i = 0; i < NUMBERS_REQUIRED; ) {
+        for (int i = 0; i < NUMBERS_REQUIRED; i++) {
             int candidate = generator.nextInt(NUMBERS_RANGE_MAX) + 1;
             if (!randomDip.getNumbersColl().contains(candidate)) {
                 randomDip.getNumbersColl().add(candidate);
-                i++;
             }
         }
-        for (int i = 0; i < STARS_REQUIRED; ) {
+        for (int i = 0; i < STARS_REQUIRED; i++) {
             int candidate = generator.nextInt(STARS_RANGE_MAX) + 1;
             if (!randomDip.getStarsColl().contains(candidate)) {
                 randomDip.getStarsColl().add(candidate);
-                i++;
             }
         }
         return randomDip;

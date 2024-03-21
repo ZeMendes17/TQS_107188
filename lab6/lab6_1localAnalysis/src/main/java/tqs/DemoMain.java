@@ -21,16 +21,22 @@ public class DemoMain {
         myBet.appendDip(Dip.generateRandomDip());
         myBet.appendDip(Dip.generateRandomDip());
         myBet.appendDip(Dip.generateRandomDip());
-        log.info("Betting with three random bets \n{} ", myBet.format());
+        if (log.isInfoEnabled()) {
+            log.info("Betting with three random bets \n{} ", myBet.format());
+        }
 
         // simulate a random draw
         EuromillionsDraw draw = EuromillionsDraw.generateRandomDraw();
-        log.info("Draw results:\n{}", draw.getDrawResults().format() );
+        if (log.isInfoEnabled()) {
+            log.info("Draw results:\n{}", draw.getDrawResults().format() );
+        }
 
         //report results
         log.info("You scored (matches): ");
         for (Dip dip : draw.findMatchesFor(myBet)) {
-           log.info( dip.format());
+           if (log.isInfoEnabled()) {
+               log.info( dip.format());
+           }
         }
     }
 }

@@ -1,6 +1,7 @@
 package tqs.euromillions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Models an Euromillions draw. Contains the solution and allows to check for
@@ -26,7 +27,7 @@ public class EuromillionsDraw {
      *
      * @return new instance
      */
-    static public EuromillionsDraw generateRandomDraw() {
+    public static EuromillionsDraw generateRandomDraw() {
         return new EuromillionsDraw(Dip.generateRandomDip());
     }
 
@@ -37,9 +38,9 @@ public class EuromillionsDraw {
      * @return an array of dips containing only the numbers and starts that
      * are also present in the draw
      */
-    public ArrayList<Dip> findMatchesFor(CuponEuromillions playCoupon) {
+    public List<Dip> findMatchesFor(CuponEuromillions playCoupon) {
 
-        ArrayList<Dip> results = new ArrayList<Dip>();
+        ArrayList<Dip> results = new ArrayList<>();
         Dip workingDip;
 
         for (Dip dipUnderAnalysis : playCoupon) {

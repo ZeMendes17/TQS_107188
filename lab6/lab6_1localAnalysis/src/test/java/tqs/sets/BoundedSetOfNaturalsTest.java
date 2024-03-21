@@ -31,7 +31,7 @@ class BoundedSetOfNaturalsTest {
     }
 
     @Test
-    public void testAddElement() {
+    void testAddElement() {
 
         setA.add(99);
         assertTrue(setA.contains(99), "add: added element not found in set.");
@@ -53,7 +53,7 @@ class BoundedSetOfNaturalsTest {
     }
 
     @Test
-    public void testAddFromBadArray() {
+    void testAddFromBadArray() {
         // tests adding numbers that are not natural
         int[] elems = new int[]{10, -20, -30};
         assertThrows(IllegalArgumentException.class, () -> setA.add(elems));
@@ -69,7 +69,7 @@ class BoundedSetOfNaturalsTest {
     }
 
     @Test
-    public void testIntersection() {
+    void testIntersection() {
         BoundedSetOfNaturals setD = BoundedSetOfNaturals.fromArray(new int[]{10, 20, 30, 40, 50, 60});
 
         // test sets that do not intersect
