@@ -2,7 +2,9 @@
 
 ## e)
 
-The project passed the defined Quality Gate, eventough it only has 74.5% of coverage, 19 Maintainability Issues and 1 Security Hotspot. It is not perfect has we can see but the parts that are not covered do not need to be. The issues and the security hotspot will be fixed. 
+The project passed the defined Quality Gate, eventough it only has 74.5% of coverage, 19 Maintainability Issues and 1 Security Hotspot. It is not perfect has we can see but the parts that are not covered do not need to be. The issues and the security hotspot will be fixed.
+
+![](img_before.png)
 
 ## f)
 
@@ -16,3 +18,5 @@ Code Smell (Major) | Invoke method(s) only conditionally | Use `log.isInfoEnable
 | Code Smell (Minor) | The return type of this method should be an interface such as "List" rather than the implementation "ArrayList" | Just change the return type of the method from "ArrayList" to "List" |
 | Code Smell (Minor) | Replace the type specification in this constructor call with the diamond operator ("<>") | Change the type defined inside the "<>" with nothing, in this case: `ArrayList<Dip> results = new ArrayList<Dip>()` becomes `ArrayList<Dip> results = new ArrayList<>()` |
 | Code Smell (Info) | Remove this 'public' modifier | Just remove the 'public' modifier as requested |
+
+![](img_after.png)
