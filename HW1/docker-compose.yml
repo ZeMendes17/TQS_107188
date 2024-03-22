@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  database:
+    image: mysql:8.0.20
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tqs_hw1
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - db_file:/var/lib/mysql
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 1s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  db_file:

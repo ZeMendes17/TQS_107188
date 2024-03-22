@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pt.ua.deti</groupId>
-	<artifactId>lab3_2carService</artifactId>
+	<artifactId>lab6_2technicalDebt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab3_2carService</name>
 	<description>Demo project for Spring Boot</description>
