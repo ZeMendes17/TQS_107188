@@ -16,5 +16,14 @@ services:
       timeout: 5s
       retries: 20
 
+  frontend:
+    build: ./frontend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./frontend:/app
+      - modules:/app/node_modules
+
 volumes:
   db_file:
+  modules:

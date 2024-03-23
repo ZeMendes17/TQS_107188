@@ -63,7 +63,7 @@ export default function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               flexGrow: 1,
@@ -74,7 +74,7 @@ export default function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Book a Bus Trip
           </Typography>
         </Toolbar>
       </Container>
