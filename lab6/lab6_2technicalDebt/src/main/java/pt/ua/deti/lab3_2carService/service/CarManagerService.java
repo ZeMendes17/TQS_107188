@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class CarManagerService {
-    @Autowired
     private CarRepository carRepository;
+
+    @Autowired
+    public CarManagerService(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
 
     public Car saveCar(Car car) {
         return carRepository.save(car);
