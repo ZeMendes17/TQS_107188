@@ -16,14 +16,49 @@ services:
       timeout: 5s
       retries: 20
 
-  frontend:
-    build: ./frontend
+  backend:
+    build: ./backend
+    restart: on-failure
     ports:
       - 8080:8080
     volumes:
+      - ./backend:/app
+      - backend_data:/root/.m2
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/tqs_hw1
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: true
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider localhost:8080/actuator/health || exit 1
+      interval: 2s
+      timeout: 30s
+      retries: 200
+      start_period: 10s
+
+  frontend:
+    build: ./frontend
+    restart: on-failure
+    ports:
+      - 3030:3030
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
       - ./frontend:/app
       - modules:/app/node_modules
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3030"]
+      interval: 1s
+      timeout: 5s
+      retries: 20
 
 volumes:
   db_file:
   modules:
+  backend_data:
