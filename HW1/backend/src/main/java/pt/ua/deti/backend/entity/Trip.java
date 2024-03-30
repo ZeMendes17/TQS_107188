@@ -71,9 +71,17 @@ public class Trip {
         this.time = time;
     }
 
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
+    }
+
     @Override
     public String toString() {
         return "Trip [id=" + id + ", tripCode=" + tripCode + ", origin=" + origin + ", destination=" + destination
-                + ", time=" + time + "]";
+                + ", time=" + time + ", price=" + price + "]";
     }
 }
