@@ -25,9 +25,6 @@ public class Trip {
     private String destination;
 
     @Column(nullable = false)
-    private String date;
-
-    @Column(nullable = false)
     private String time;
 
     // getters and setters
@@ -63,14 +60,6 @@ public class Trip {
         this.destination = destination;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public String getTime() {
         return time;
     }
@@ -82,6 +71,6 @@ public class Trip {
     @Override
     public String toString() {
         return "Trip [id=" + id + ", tripCode=" + tripCode + ", origin=" + origin + ", destination=" + destination
-                + ", date=" + date + ", time=" + time + "]";
+                + ", time=" + time + "]";
     }
 }

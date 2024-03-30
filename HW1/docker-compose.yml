@@ -15,6 +15,24 @@ services:
       interval: 1s
       timeout: 5s
       retries: 20
+    networks:
+      - backend
+
+  # redis:
+  #   image: redis
+  #   restart: always
+  #   ports:
+  #     - 6379:6379
+  #   volumes:
+  #     - redis_data:/data
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 1s
+  #     timeout: 5s
+  #     retries: 20
+  #   networks:
+  #     - backend
+    
 
   backend:
     build: ./backend
@@ -27,6 +45,8 @@ services:
     depends_on:
       database:
         condition: service_healthy
+      # redis:
+      #   condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/tqs_hw1
       SPRING_DATASOURCE_USERNAME: root
@@ -34,12 +54,17 @@ services:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: true
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+      # SPRING_CACHE_TYPE: redis
+      # SPRING_CACHE_REDIS_TIME_TO_LIVE: 3600000
     healthcheck:
       test: wget --no-verbose --tries=1 --spider localhost:8080/actuator/health || exit 1
       interval: 2s
       timeout: 30s
       retries: 200
       start_period: 10s
+    networks:
+      - backend
+      - frontend
 
   frontend:
     build: ./frontend
@@ -57,8 +82,15 @@ services:
       interval: 1s
       timeout: 5s
       retries: 20
+    networks:
+      - frontend
 
 volumes:
   db_file:
+  # redis_data:
   modules:
   backend_data:
+
+networks:
+  backend:
+  frontend:
