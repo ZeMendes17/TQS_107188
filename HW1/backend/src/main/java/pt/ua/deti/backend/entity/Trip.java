@@ -27,6 +27,9 @@ public class Trip {
     @Column(nullable = false)
     private String time;
 
+    @Column(nullable = false)
+    private Float price;
+
     // getters and setters
     public Integer getId() {
         return id;

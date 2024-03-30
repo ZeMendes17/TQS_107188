@@ -26,11 +26,11 @@ public class ExchangeRateApi {
 
         try {
             HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            log.info("Exchange rate API response: " + response.body());
+            log.info("Exchange rates retrieved successfully");
             return response.body();
         } catch (Exception e) {
             e.printStackTrace();
-            log.error("Error getting exchange rates: " + e.getMessage());
+            log.error("Failed to retrieve exchange rates: " + e.getMessage());
             return null;
         }
     }
