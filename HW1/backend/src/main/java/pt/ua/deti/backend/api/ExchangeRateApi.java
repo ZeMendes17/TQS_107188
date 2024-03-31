@@ -5,7 +5,9 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpClient;
 import java.net.URI;
 
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,4 +37,9 @@ public class ExchangeRateApi {
         }
     }
 
+    @CacheEvict(value = "exchangeRate", allEntries = true)
+    @Scheduled(fixedRate = 600000) // 10 minutes in milliseconds
+    public void evictCache() {
+        log.info("Cache evicted");
+    }
 }
