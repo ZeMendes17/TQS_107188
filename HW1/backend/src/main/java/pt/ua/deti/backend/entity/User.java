@@ -2,9 +2,14 @@ package pt.ua.deti.backend.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.CascadeType;
+import java.util.List;
 
 @Entity
 public class User {
@@ -13,31 +18,24 @@ public class User {
     private Integer id;
 
     @Column(nullable = false)
-    private String firstName;
-
-    @Column(nullable = false)
-    private String lastName;
+    private String name;
 
     @Column(nullable = false)
     private String email;
 
     @Column(nullable = false)
-    private String adress;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "reservation_id")
+    private List<Reservation> reservations;
 
-    @Column(nullable = false)
-    private String city;
+    // constructors
+    public User() {
+    }
 
-    @Column(nullable = false)
-    private String zipCode;
-
-    @Column(nullable = false)
-    private Integer creditCardNumber;
-
-    @Column(nullable = false)
-    private String creditCardExpirationDate;
-
-    @Column(nullable = false)
-    private String creditCardName;
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 
     // getters and setters
     public Integer getId() {
@@ -48,20 +46,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -72,58 +62,28 @@ public class User {
         this.email = email;
     }
 
-    public String getAdress() {
-        return adress;
+    public List<Reservation> getReservations() {
+        return reservations;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
-    public String getCity() {
-        return city;
+    public void addReservation(Reservation reservation) {
+        this.reservations.add(reservation);
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void removeReservation(Reservation reservation) {
+        this.reservations.remove(reservation);
     }
 
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public Integer getCreditCardNumber() {
-        return creditCardNumber;
-    }
-
-    public void setCreditCardNumber(Integer creditCardNumber) {
-        this.creditCardNumber = creditCardNumber;
-    }
-
-    public String getCreditCardExpirationDate() {
-        return creditCardExpirationDate;
-    }
-
-    public void setCreditCardExpirationDate(String creditCardExpirationDate) {
-        this.creditCardExpirationDate = creditCardExpirationDate;
-    }
-
-    public String getCreditCardName() {
-        return creditCardName;
-    }
-
-    public void setCreditCardName(String creditCardName) {
-        this.creditCardName = creditCardName;
+    public void clearReservations() {
+        this.reservations.clear();
     }
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", adress="
-                + adress + ", city=" + city + ", zipCode=" + zipCode + ", creditCardNumber=" + creditCardNumber
-                + ", creditCardExpirationDate=" + creditCardExpirationDate + ", creditCardName=" + creditCardName + "]";
+        return "User [id=" + id + ", name=" + name + ", email=" + email + "]";
     }
 }

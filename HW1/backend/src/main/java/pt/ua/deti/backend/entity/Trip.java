@@ -1,5 +1,7 @@
 package pt.ua.deti.backend.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,6 +31,21 @@ public class Trip {
 
     @Column(nullable = false)
     private Float price;
+
+    @Column
+    private List<String> seats;
+
+    // constructors
+    public Trip() {
+    }
+
+    public Trip(String tripCode, String origin, String destination, String time, Float price) {
+        this.tripCode = tripCode;
+        this.origin = origin;
+        this.destination = destination;
+        this.time = time;
+        this.price = price;
+    }
 
     // getters and setters
     public Integer getId() {
@@ -77,6 +94,14 @@ public class Trip {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public List<String> getSeats() {
+        return seats;
+    }
+
+    public void setSeats(List<String> seats) {
+        this.seats = seats;
     }
 
     @Override
