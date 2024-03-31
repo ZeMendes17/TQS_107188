@@ -6,8 +6,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.FetchType;
 
 @Entity
 @Table(name = "trip")
@@ -32,8 +34,8 @@ public class Trip {
     @Column(nullable = false)
     private Float price;
 
-    @Column
-    private List<String> seats;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "trip")
+    private List<Seat> seats;
 
     // constructors
     public Trip() {
@@ -96,11 +98,11 @@ public class Trip {
         this.price = price;
     }
 
-    public List<String> getSeats() {
+    public List<Seat> getSeats() {
         return seats;
     }
 
-    public void setSeats(List<String> seats) {
+    public void setSeats(List<Seat> seats) {
         this.seats = seats;
     }
 
