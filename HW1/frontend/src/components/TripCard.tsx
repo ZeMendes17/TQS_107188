@@ -3,6 +3,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from 'react-router-dom';
 
 interface TripCardProps {
     origin: string;
@@ -16,6 +17,12 @@ interface TripCardProps {
 export default function TripCard({ origin, destination, time, code, price }: TripCardProps) {
     // time is a string in the format "08:00:00", remove the seconds
     time = time.split(":").slice(0, 2).join(":");
+
+    const navigate = useNavigate();
+
+    const buyTrip = () => {
+        navigate(`/pay?code=${code}`);
+    }
 
   return (
     <div>
@@ -39,7 +46,7 @@ export default function TripCard({ origin, destination, time, code, price }: Tri
         <CardActions>
           <Button size="small" variant="outlined"
                 sx={{ backgroundColor: '#a2e53f', color: 'black'}}
-                onClick={() => alert("Buy " + code)}
+                onClick={buyTrip}
                 >Buy</Button>
         </CardActions>
       </Card>
