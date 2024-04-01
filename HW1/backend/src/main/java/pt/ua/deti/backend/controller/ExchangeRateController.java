@@ -11,6 +11,9 @@ import pt.ua.deti.backend.api.ExchangeRateApi;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
+import java.util.List;
+import java.util.Map;
+
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/api/v1")
@@ -28,8 +31,15 @@ public class ExchangeRateController {
 
     // method to get the exchange rate
     @GetMapping("/exchange-rate")
-    public String getExchangeRate() {
+    public Map<String, Float> getExchangeRate() {
         log.info("GET /exchange-rate");
         return exchangeRateApi.getExchangeRate();
+    }
+
+    // method to get the coins in the exchange rate
+    @GetMapping("/exchange-rate/coins")
+    public List<String> getCoins() {
+        log.info("GET /exchange-rate/coins");
+        return exchangeRateApi.getCoins();
     }
 }
