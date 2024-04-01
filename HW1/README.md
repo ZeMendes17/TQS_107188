@@ -43,6 +43,13 @@ docker compose up --build
 
 > The Website will be available at `http://localhost:3030` and the REST API at `http://localhost:8080`
 
+## 5. How to test
+
+```bash
+# With the docker compose running
+docker exec -it hw1-backend-1 bash -c "mvn test"
+```
+
 ## 5. Author
 
 José Mendes, 107188
