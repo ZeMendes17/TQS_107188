@@ -1,5 +1,7 @@
 package pt.ua.deti.backend.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -10,6 +12,7 @@ import pt.ua.deti.backend.entity.Trip;
 
 @Service
 public class TripService {
+    private static final Logger log = LoggerFactory.getLogger(TripService.class);
     private TripRepo tripRepo;
 
     @Autowired
@@ -19,14 +22,20 @@ public class TripService {
 
     // methods
     public Trip save(Trip trip) {
+        log.info("Saving trip: " + trip);
+
         return tripRepo.save(trip);
     }
 
     public List<Trip> getAllTrips() {
+        log.info("Getting all trips");
+
         return tripRepo.findAll();
     }
 
     public List<String> getAllCities() {
+        log.info("Getting all cities");
+
         List<Trip> trips = tripRepo.findAll();
         List<String> originCities = new ArrayList<>();
         List<String> destinationCities = new ArrayList<>();
@@ -50,10 +59,12 @@ public class TripService {
     }
 
     public List<Trip> searchTrips(String origin, String destination) {
+        log.info("Getting trips from " + origin + " to " + destination);
         return tripRepo.findByOriginAndDestination(origin, destination);
     }
 
     public Trip searchTripByCode(String code) {
+        log.info("Getting trip with code: " + code);
         return tripRepo.findByTripCode(code);
     }
 }

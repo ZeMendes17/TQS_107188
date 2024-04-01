@@ -1,5 +1,7 @@
 package pt.ua.deti.backend.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,8 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("/api/v1")
 public class ReservationController {
+    private static final Logger log = LoggerFactory.getLogger(ReservationController.class);
+
     private ReservationService reservationService;
     private SeatService seatService;
     private UserService userService;
@@ -43,6 +47,8 @@ public class ReservationController {
     // methods
     @PostMapping("/reservation")
     public Reservation saveReservation(@RequestParam String code, @RequestParam String date, @RequestParam Integer userId) {
+        log.info("POST /reservation?code=" + code + "&date=" + date + "&userId=" + userId);
+
         Trip trip = tripService.searchTripByCode(code);
         List<Seat> seats = seatService.getSeatsByTripId(trip.getId());
         Seat seat = seats.get(0);
@@ -54,6 +60,8 @@ public class ReservationController {
     
     @GetMapping("/reservation")
     public Map<String, String> getReservationByToken(@RequestParam String token) {
+        log.info("GET /reservation?token=" + token);
+
         Map<String, String> response = new HashMap<>();
         Reservation r = reservationService.getReservationByToken(token);
         response.put("reservationToken", r.getReservationToken());
