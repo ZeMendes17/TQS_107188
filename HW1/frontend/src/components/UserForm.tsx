@@ -11,8 +11,14 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useState } from 'react';
 
-export default function UserForm() {
+interface UserFormProps {
+    code: string;
+}
+
+export default function UserForm({ code }: UserFormProps) {
     const today = new Date().toISOString().split('T')[0];
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
@@ -23,6 +29,7 @@ export default function UserForm() {
     const [creditCardNumber, setCreditCardNumber] = React.useState("");
     const [cvv, setCvv] = React.useState("");
     const [nameOnCard, setNameOnCard] = React.useState("");
+    const [user, setUser] = useState({});
 
     const navigate = useNavigate();
 
@@ -42,6 +49,29 @@ export default function UserForm() {
         // add name and email to local storage
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);
+
+        // post the purchase to the backend
+        axios.post("http://localhost:8080/api/v1/user", {
+            name: name,
+            email: email,
+        })
+        .then((response) => {
+            console.log("User created: ", response.data);
+            setUser(response.data);
+            // make the reservation
+            axios.post("http://localhost:8080/api/v1/reservation?code=" + code
+            + "&date=" + localStorage.getItem("date") + "&userId=" + response.data.id)
+            .then((response) => {
+                console.log("Reservation created: ", response.data);
+                localStorage.setItem("reservationToken", response.data.reservationToken);
+            })
+            .catch((error) => {
+                console.error("Error creating reservation: ", error);
+            });
+        })
+        .catch((error) => {
+            console.error("Error creating user: ", error);
+        });
 
         // navigate to success page
         navigate("/success");
@@ -117,9 +147,9 @@ export default function UserForm() {
             <HelperText />
         </FormControl>
 
-            <Button variant="contained" sx={{backgroundColor: '#a2e53f', color: 'black', marginTop: "20px"}} onClick={purchaseTrip}>
-                Pay
-            </Button>
+        <Button variant="contained" sx={{backgroundColor: '#a2e53f', color: 'black', marginTop: "20px"}} onClick={purchaseTrip}>
+            Pay
+        </Button>
     </div>
   );
 }

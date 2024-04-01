@@ -2,14 +2,9 @@ package pt.ua.deti.backend.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.CascadeType;
-import java.util.List;
 
 @Entity
 public class User {
@@ -22,11 +17,6 @@ public class User {
 
     @Column(nullable = false)
     private String email;
-
-    @Column(nullable = false)
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "reservation_id")
-    private List<Reservation> reservations;
 
     // constructors
     public User() {
@@ -60,26 +50,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public List<Reservation> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(List<Reservation> reservations) {
-        this.reservations = reservations;
-    }
-
-    public void addReservation(Reservation reservation) {
-        this.reservations.add(reservation);
-    }
-
-    public void removeReservation(Reservation reservation) {
-        this.reservations.remove(reservation);
-    }
-
-    public void clearReservations() {
-        this.reservations.clear();
     }
 
     @Override

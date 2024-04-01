@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Trips from './pages/Trips.tsx';
 import Pay from './pages/Pay.tsx';
 import Success from './pages/Success.tsx';
+import Reservations from './pages/Reservations.tsx';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/success",
-    element: <Success code="" name="" email="" />,
+    element: <Success />,
+  },
+  {
+    path: "/reservations",
+    element: <Reservations />,
   },
   {
     path: "*",

@@ -49,7 +49,7 @@ export default function Pay() {
                 <h2>Enter your information</h2>
             </div>
             <div style={{marginTop: "10px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                <UserForm />
+                <UserForm code={code} />
             </div>
             </Container>
         </>

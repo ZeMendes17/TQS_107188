@@ -83,7 +83,9 @@ export default function Finder() {
                 </Select>
             </FormControl>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker defaultValue={dayjs(today)} sx={{margin: "10px"}} />  
+                <DatePicker defaultValue={dayjs(today)} sx={{margin: "10px"}}
+                    onChange={(date) => localStorage.setItem("date", date?.toString().split('T')[0] || '')}
+                />  
             </LocalizationProvider>
 
             <Button variant="outlined" style={{ margin: "10px" }}

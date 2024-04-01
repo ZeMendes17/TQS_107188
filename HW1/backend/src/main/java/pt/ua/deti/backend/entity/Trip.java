@@ -1,15 +1,11 @@
 package pt.ua.deti.backend.entity;
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.FetchType;
 
 @Entity
 @Table(name = "trip")
@@ -33,9 +29,6 @@ public class Trip {
 
     @Column(nullable = false)
     private Float price;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "trip")
-    private List<Seat> seats;
 
     // constructors
     public Trip() {
@@ -96,14 +89,6 @@ public class Trip {
 
     public void setPrice(Float price) {
         this.price = price;
-    }
-
-    public List<Seat> getSeats() {
-        return seats;
-    }
-
-    public void setSeats(List<Seat> seats) {
-        this.seats = seats;
     }
 
     @Override

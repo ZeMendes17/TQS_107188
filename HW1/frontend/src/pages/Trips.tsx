@@ -34,11 +34,7 @@ export default function Trips() {
             <Container style={{display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
                 {trips.map((trip) => (
                     <TripCard
-                        origin={trip.origin}
-                        destination={trip.destination}
-                        time={trip.time}
                         code={trip.tripCode}
-                        price={trip.price}
                     />
                 ))}
             </Container>

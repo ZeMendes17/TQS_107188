@@ -4,19 +4,29 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import { useState, useEffect } from 'react';
 
 interface TripCardProps {
-    origin: string;
-    destination: string;
-    time: string;
     code: string;
-    price: number;
 }
 
 
-export default function TripCard({ origin, destination, time, code, price }: TripCardProps) {
-    // time is a string in the format "08:00:00", remove the seconds
-    time = time.split(":").slice(0, 2).join(":");
+export default function TripCard({ code }: TripCardProps) {
+
+    const [trip, setTrip] = useState({});
+    const [time, setTime] = useState("");
+    useEffect(() => {
+        axios.get(`http://localhost:8080/api/v1/trip/search/code?code=${code}`)
+            .then((response) => {
+                console.log("Trip: ", response.data);
+                setTrip(response.data);
+                setTime(response.data.time.split(":").slice(0, 2).join(":"));
+            })
+            .catch((error) => {
+                console.error("Error fetching trip: ", error);
+            });
+    }, [code]);
 
     const navigate = useNavigate();
 
@@ -29,7 +39,7 @@ export default function TripCard({ origin, destination, time, code, price }: Tri
       <Card sx={{ width: "1000px", marginBottom: "15px" }}>
         <CardContent>
           <Typography variant="h3" gutterBottom>
-            From <u>{origin}</u> to <u>{destination}</u>
+            From <u>{trip.origin}</u> to <u>{trip.destination}</u>
           </Typography>
           <Typography variant="h4" component="div">
             Trip Code: <u>{code}</u>
@@ -39,7 +49,7 @@ export default function TripCard({ origin, destination, time, code, price }: Tri
             <br />
           </Typography>
           <Typography variant="body1" sx={{marginTop: "10px"}}>
-            {price} €
+            {trip.price} €
             <br />
           </Typography>
         </CardContent>

@@ -2,11 +2,13 @@ package pt.ua.deti.backend.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import java.util.Date;
 
 @Entity
 @Table(name = "reservation")
@@ -26,13 +28,17 @@ public class Reservation {
     private String seat;
 
     @Column(nullable = false)
-    private Date date;
+    private String date;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     // constructors
     public Reservation() {
     }
     
-    public Reservation(String reservationToken, Date date) {
+    public Reservation(String reservationToken, String date, User user) {
         this.reservationToken = reservationToken;
         // the reservationToken is like: BR-PO-005_3B
         // BR-PO-005 is the tripCode
@@ -40,6 +46,7 @@ public class Reservation {
         this.tripCode = reservationToken.substring(0, reservationToken.indexOf('_'));
         this.seat = reservationToken.substring(reservationToken.indexOf('_') + 1);
         this.date = date;
+        this.user = user;
     }
 
     // getters and setters
@@ -75,12 +82,20 @@ public class Reservation {
         this.seat = seat;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
