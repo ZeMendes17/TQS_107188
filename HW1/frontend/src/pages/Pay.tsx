@@ -16,6 +16,7 @@ export default function Pay() {
     const [time, setTime] = useState("");
     const [trip, setTrip] = useState({});
     const [price, setPrice] = useState(0);
+    const [realPrice, setRealPrice] = useState(0);
     useEffect(() => {
         axios.get(`http://localhost:8080/api/v1/trip/search/code?code=${code}`)
             .then((response) => {
@@ -23,6 +24,7 @@ export default function Pay() {
                 setTrip(response.data);
                 setTime(response.data.time.split(":").slice(0, 2).join(":"));
                 setPrice(response.data.price);
+                setRealPrice(response.data.price);
             })
             .catch((error) => {
                 console.error("Error fetching trip: ", error);
@@ -47,7 +49,15 @@ export default function Pay() {
 
     const chooseCurrency = (coin: string) => {
         // change the price
-        alert(`You have chosen ${coin}`);
+        axios.get(`http://localhost:8080/api/v1/exchange-rate/coin?coin=${coin}&price=${realPrice}`)
+            .then((response) => {
+                console.log("Price: ", response.data);
+                setPrice(response.data);
+                setCurrency(coin);
+            })
+            .catch((error) => {
+                console.error("Error fetching price: ", error);
+            });
     }
 
     return (
