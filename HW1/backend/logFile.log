@@ -2015,3 +2015,439 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Float.floatValue()" bec
 21:19:21.963 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 21:19:21.967 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 21:19:21.977 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:22:38.153 [restartedMain] INFO  p.ua.deti.backend.BackendApplication - Starting BackendApplication using Java 17 with PID 68 (/app/target/classes started by root in /app)
+09:22:38.158 [restartedMain] INFO  p.ua.deti.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+09:22:38.218 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09:22:38.218 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09:22:39.613 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:22:39.722 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
+09:22:40.844 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+09:22:40.855 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+09:22:40.859 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:22:40.860 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+09:22:40.912 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:22:40.913 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2693 ms
+09:22:41.302 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:22:41.468 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+09:22:41.546 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:22:41.971 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:22:42.016 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:22:42.769 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22d9c93a
+09:22:42.771 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:22:42.830 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:22:42.831 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+09:22:44.049 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:22:44.346 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:22:45.260 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:22:46.150 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+09:22:46.162 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+09:22:46.250 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+09:22:46.271 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+09:22:46.293 [restartedMain] INFO  p.ua.deti.backend.BackendApplication - Started BackendApplication in 8.769 seconds (process running for 9.722)
+09:22:46.900 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:22:46.900 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:22:46.902 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+09:23:03.776 [http-nio-8080-exec-1] INFO  p.u.d.b.controller.TripController - GET /city
+09:23:03.777 [http-nio-8080-exec-1] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:23:20.535 [http-nio-8080-exec-3] INFO  p.u.d.b.controller.TripController - GET /trip/search?origin=Lisboa&destination=Porto
+09:23:20.536 [http-nio-8080-exec-3] INFO  p.u.deti.backend.service.TripService - Getting trips from Lisboa to Porto
+09:23:20.693 [http-nio-8080-exec-4] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-001
+09:23:20.694 [http-nio-8080-exec-4] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-001
+09:23:20.698 [http-nio-8080-exec-5] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-002
+09:23:20.698 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:23:20.709 [http-nio-8080-exec-6] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-004
+09:23:20.709 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-004
+09:23:20.711 [http-nio-8080-exec-7] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-005
+09:23:20.711 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-005
+09:23:20.713 [http-nio-8080-exec-8] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-006
+09:23:20.713 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-006
+09:23:20.721 [http-nio-8080-exec-9] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-003
+09:23:20.721 [http-nio-8080-exec-9] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-003
+09:23:24.988 [http-nio-8080-exec-2] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-002
+09:23:24.989 [http-nio-8080-exec-2] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:23:24.989 [http-nio-8080-exec-3] INFO  p.u.d.b.c.ExchangeRateController - GET /exchange-rate/coins
+09:23:27.231 [http-nio-8080-exec-3] INFO  p.u.deti.backend.api.ExchangeRateApi - Coins retrieved successfully
+09:23:42.265 [http-nio-8080-exec-6] INFO  p.u.d.b.controller.TripController - GET /trip/search?origin=Lisboa&destination=Porto
+09:23:42.265 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting trips from Lisboa to Porto
+09:23:42.325 [http-nio-8080-exec-9] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-003
+09:23:42.326 [http-nio-8080-exec-8] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-002
+09:23:42.326 [http-nio-8080-exec-7] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-001
+09:23:42.326 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:23:42.326 [http-nio-8080-exec-9] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-003
+09:23:42.327 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-001
+09:23:42.327 [http-nio-8080-exec-10] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-004
+09:23:42.328 [http-nio-8080-exec-10] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-004
+09:23:42.331 [http-nio-8080-exec-1] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-005
+09:23:42.331 [http-nio-8080-exec-1] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-005
+09:23:42.332 [http-nio-8080-exec-2] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-006
+09:23:42.333 [http-nio-8080-exec-2] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-006
+09:23:45.248 [http-nio-8080-exec-7] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=LI-PO-002
+09:23:45.249 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:23:45.266 [http-nio-8080-exec-9] INFO  p.u.d.b.c.ExchangeRateController - GET /exchange-rate/coins
+09:23:49.168 [http-nio-8080-exec-4] INFO  p.u.d.b.c.ExchangeRateController - GET /exchange-rate/HUF
+09:23:49.354 [http-nio-8080-exec-4] INFO  p.u.deti.backend.api.ExchangeRateApi - Exchange rates retrieved successfully
+09:23:53.587 [http-nio-8080-exec-9] INFO  p.u.d.b.c.ExchangeRateController - GET /exchange-rate/BRL
+09:24:57.505 [http-nio-8080-exec-10] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=PO-LI-002_A2
+09:24:57.506 [http-nio-8080-exec-10] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: PO-LI-002_A2
+09:24:57.518 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null
+	at pt.ua.deti.backend.controller.ReservationController.getReservationByToken(ReservationController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+09:24:57.558 [http-nio-8080-exec-7] INFO  p.u.d.b.controller.UserController - POST /user
+09:24:57.559 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.UserService - Saving user: User [id=null, name=ze, email=ze@mail.com]
+09:24:57.652 [http-nio-8080-exec-5] INFO  p.u.d.b.c.ReservationController - POST /reservation?code=LI-PO-002&date=Mon, 15 Apr 2024 23:00:00 GM&userId=1
+09:24:57.652 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:24:57.659 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.SeatService - Getting seats from trip with id: 8
+09:24:57.672 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.SeatService - Deleting seat: A1 from trip with id: 8
+09:24:57.707 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.UserService - Getting user by id: 1
+09:24:57.720 [http-nio-8080-exec-5] INFO  p.u.d.b.service.ReservationService - Saving reservation with token: LI-PO-002_A1, date: Mon, 15 Apr 2024 23:00:00 GM, user: User [id=1, name=ze, email=ze@mail.com]
+09:25:20.150 [http-nio-8080-exec-1] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=PO-LI-002_A2
+09:25:20.151 [http-nio-8080-exec-1] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: PO-LI-002_A2
+09:25:20.157 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null
+	at pt.ua.deti.backend.controller.ReservationController.getReservationByToken(ReservationController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+09:25:43.667 [http-nio-8080-exec-9] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=PO-LI-002_A2
+09:25:43.667 [http-nio-8080-exec-9] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: PO-LI-002_A2
+09:25:43.676 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null
+	at pt.ua.deti.backend.controller.ReservationController.getReservationByToken(ReservationController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+09:25:54.174 [http-nio-8080-exec-6] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=LI-PO-002_A1
+09:25:54.174 [http-nio-8080-exec-6] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: LI-PO-002_A1
+09:25:54.191 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:26:04.410 [http-nio-8080-exec-10] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=LI-PO-002_A1
+09:26:04.411 [http-nio-8080-exec-10] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: LI-PO-002_A1
+09:26:04.417 [http-nio-8080-exec-10] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:26:15.864 [http-nio-8080-exec-7] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=LI-PO-002_A1
+09:26:15.865 [http-nio-8080-exec-7] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: LI-PO-002_A1
+09:26:15.886 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting trip with code: LI-PO-002
+09:31:01.954 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pt.ua.deti.backend.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:31:02.205 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration pt.ua.deti.backend.BackendApplication for test class pt.ua.deti.backend.BackendApplicationTests
+09:31:02.534 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+09:31:02.973 [main] INFO  p.u.d.b.BackendApplicationTests - Starting BackendApplicationTests using Java 17 with PID 1947 (started by root in /app)
+09:31:02.975 [main] INFO  p.u.d.b.BackendApplicationTests - No active profile set, falling back to 1 default profile: "default"
+09:31:04.662 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:31:04.772 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+09:31:06.077 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:31:06.186 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+09:31:06.265 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:31:06.735 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:31:06.793 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:31:07.404 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4279fc70
+09:31:07.407 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:31:07.511 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:31:07.513 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+09:31:09.214 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:31:09.377 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:31:10.638 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:31:11.728 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+09:31:11.851 [main] INFO  p.u.d.b.BackendApplicationTests - Started BackendApplicationTests in 9.348 seconds (process running for 11.89)
+09:31:12.663 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:31:12.669 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:31:12.680 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:41:14.756 [restartedMain] INFO  p.ua.deti.backend.BackendApplication - Starting BackendApplication using Java 17 with PID 1263 (/app/target/classes started by root in /app)
+09:41:14.760 [restartedMain] INFO  p.ua.deti.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+09:41:14.818 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09:41:14.818 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09:41:15.939 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:41:16.032 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
+09:41:16.755 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+09:41:16.768 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+09:41:16.771 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:41:16.771 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+09:41:16.821 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:41:16.823 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2003 ms
+09:41:17.113 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:41:17.158 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+09:41:17.185 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+09:41:17.380 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+09:41:17.408 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:41:17.741 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9ac343f
+09:41:17.743 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:41:17.795 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+09:41:17.796 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+09:41:18.575 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09:41:19.090 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:41:19.694 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:41:20.355 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+09:41:20.368 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+09:41:20.449 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+09:41:20.469 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+09:41:20.496 [restartedMain] INFO  p.ua.deti.backend.BackendApplication - Started BackendApplication in 6.04 seconds (process running for 6.549)
+09:41:21.533 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:41:21.534 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:41:21.536 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+09:41:29.872 [http-nio-8080-exec-5] INFO  p.u.d.b.controller.TripController - GET /city
+09:41:29.873 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:41:39.926 [http-nio-8080-exec-4] INFO  p.u.d.b.controller.TripController - GET /city
+09:41:39.927 [http-nio-8080-exec-4] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:42:29.327 [http-nio-8080-exec-6] INFO  p.u.d.b.controller.TripController - GET /city
+09:42:29.327 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:43:07.986 [http-nio-8080-exec-3] INFO  p.u.d.b.controller.TripController - GET /trip/search?origin=Coimbra&destination=Aveiro
+09:43:07.987 [http-nio-8080-exec-3] INFO  p.u.deti.backend.service.TripService - Getting trips from Coimbra to Aveiro
+09:43:08.094 [http-nio-8080-exec-4] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=CO-AV-001
+09:43:08.094 [http-nio-8080-exec-4] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-001
+09:43:08.100 [http-nio-8080-exec-6] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=CO-AV-002
+09:43:08.101 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-002
+09:43:08.105 [http-nio-8080-exec-5] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=CO-AV-003
+09:43:08.106 [http-nio-8080-exec-5] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-003
+09:43:08.107 [http-nio-8080-exec-7] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=CO-AV-004
+09:43:08.108 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-004
+09:43:08.108 [http-nio-8080-exec-8] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=CO-AV-005
+09:43:08.109 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-005
+09:43:12.024 [http-nio-8080-exec-3] INFO  p.u.d.b.controller.TripController - GET /trip/search/code?code=CO-AV-002
+09:43:12.024 [http-nio-8080-exec-4] INFO  p.u.d.b.c.ExchangeRateController - GET /exchange-rate/coins
+09:43:12.024 [http-nio-8080-exec-3] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-002
+09:43:13.283 [http-nio-8080-exec-4] INFO  p.u.deti.backend.api.ExchangeRateApi - Coins retrieved successfully
+09:43:15.264 [http-nio-8080-exec-9] INFO  p.u.d.b.c.ExchangeRateController - GET /exchange-rate/ETB
+09:43:15.470 [http-nio-8080-exec-9] INFO  p.u.deti.backend.api.ExchangeRateApi - Exchange rates retrieved successfully
+09:43:31.409 [http-nio-8080-exec-3] INFO  p.u.d.b.controller.UserController - POST /user
+09:43:31.410 [http-nio-8080-exec-3] INFO  p.u.deti.backend.service.UserService - Saving user: User [id=null, name=ze, email=ze@mail.com]
+09:43:31.410 [http-nio-8080-exec-5] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=LI-PO-002_A1
+09:43:31.411 [http-nio-8080-exec-5] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: LI-PO-002_A1
+09:43:31.426 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "pt.ua.deti.backend.entity.Reservation.getReservationToken()" because "r" is null
+	at pt.ua.deti.backend.controller.ReservationController.getReservationByToken(ReservationController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+09:43:31.494 [http-nio-8080-exec-8] INFO  p.u.d.b.c.ReservationController - POST /reservation?code=CO-AV-002&date=Wed, 03 Apr 2024 23:00:00 GM&userId=1
+09:43:31.494 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-002
+09:43:31.498 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.SeatService - Getting seats from trip with id: 67
+09:43:31.505 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.SeatService - Deleting seat: A1 from trip with id: 67
+09:43:31.528 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.UserService - Getting user by id: 1
+09:43:31.541 [http-nio-8080-exec-8] INFO  p.u.d.b.service.ReservationService - Saving reservation with token: CO-AV-002_A1, date: Wed, 03 Apr 2024 23:00:00 GM, user: User [id=1, name=ze, email=ze@mail.com]
+09:43:35.544 [http-nio-8080-exec-10] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=CO-AV-002_A1
+09:43:35.544 [http-nio-8080-exec-10] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: CO-AV-002_A1
+09:43:35.562 [http-nio-8080-exec-10] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-002
+09:43:52.877 [http-nio-8080-exec-7] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=CO-AV-002_A1
+09:43:52.877 [http-nio-8080-exec-7] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: CO-AV-002_A1
+09:43:52.886 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-002
+09:43:57.006 [http-nio-8080-exec-6] INFO  p.u.d.b.c.ReservationController - GET /reservation?token=CO-AV-002_A1
+09:43:57.007 [http-nio-8080-exec-6] INFO  p.u.d.b.service.ReservationService - Getting reservation by token: CO-AV-002_A1
+09:43:57.016 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting trip with code: CO-AV-002
+09:44:18.893 [http-nio-8080-exec-1] INFO  p.u.d.b.controller.TripController - GET /city
+09:44:18.893 [http-nio-8080-exec-1] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:47:16.601 [http-nio-8080-exec-2] INFO  p.u.d.b.controller.TripController - GET /city
+09:47:16.601 [http-nio-8080-exec-2] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:49:12.938 [http-nio-8080-exec-6] INFO  p.u.d.b.controller.TripController - GET /city
+09:49:12.939 [http-nio-8080-exec-6] INFO  p.u.deti.backend.service.TripService - Getting all cities
+09:49:21.391 [http-nio-8080-exec-2] INFO  p.u.d.b.controller.TripController - GET /city
+09:49:21.391 [http-nio-8080-exec-2] INFO  p.u.deti.backend.service.TripService - Getting all cities
+10:01:30.967 [http-nio-8080-exec-9] INFO  p.u.d.b.controller.TripController - GET /city
+10:01:30.968 [http-nio-8080-exec-9] INFO  p.u.deti.backend.service.TripService - Getting all cities
+10:02:10.058 [http-nio-8080-exec-7] INFO  p.u.d.b.controller.TripController - GET /city
+10:02:10.059 [http-nio-8080-exec-7] INFO  p.u.deti.backend.service.TripService - Getting all cities
+10:02:59.551 [http-nio-8080-exec-8] INFO  p.u.d.b.controller.TripController - GET /city
+10:02:59.552 [http-nio-8080-exec-8] INFO  p.u.deti.backend.service.TripService - Getting all cities

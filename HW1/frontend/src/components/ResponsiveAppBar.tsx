@@ -8,8 +8,10 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Book a trip', 'Previous trips', 'About us',  ]
+const pages = ['Book a Trip', 'Check your Reservations',  ]
+const links = ['/', '/reservations']
 
 export default function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -21,6 +23,8 @@ export default function ResponsiveAppBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const navigate = useNavigate();
 
   return (
     <AppBar sx={{ backgroundColor: '#a2e53f' }}>
@@ -54,7 +58,11 @@ export default function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center"
+                  onClick={() => navigate(links[pages.indexOf(page)])}
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -63,7 +71,7 @@ export default function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            onClick={() => navigate('/')}
             sx={{
               mr: 2,
               flexGrow: 1,
