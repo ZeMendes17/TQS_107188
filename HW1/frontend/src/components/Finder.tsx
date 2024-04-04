@@ -48,15 +48,16 @@ export default function Finder() {
                 sx={{ minWidth: 120 }}
                 style={{ margin: "10px" }}
             >
-                <InputLabel id="demo-simple-select-label">From</InputLabel>
+                <InputLabel id="originLabel">From</InputLabel>
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+                    labelId="originLabel"
+                    id="originSelect"
                     label="City"
                 >
                     {cities.map((city) => (
                         <MenuItem value={city}
                         onClick={() => setOrigin(city)}
+                        id={"origin_" + city}
                         >
                             {city}
                         </MenuItem>
@@ -67,15 +68,16 @@ export default function Finder() {
                 sx={{ minWidth: 120 }}
                 style={{ margin: "10px" }}
             >
-                <InputLabel id="demo-simple-select-label">To</InputLabel>
+                <InputLabel id="destLabel">To</InputLabel>
                 <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
+                    labelId="destLabel"
+                    id="destSelect"
                     label="City"
                 >
                     {cities.map((city) => (
                         <MenuItem value={city}
                         onClick={() => setDestination(city)}
+                        id={"dest_" + city}
                         >
                             {city}
                         </MenuItem>
@@ -91,6 +93,7 @@ export default function Finder() {
             <Button variant="outlined" style={{ margin: "10px" }}
                 sx={{ backgroundColor: '#a2e53f', color: 'black'}}
                 onClick={searchTrips}
+                id="searchButton"
             >
                 Search
             </Button>

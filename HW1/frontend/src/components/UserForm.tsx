@@ -63,7 +63,8 @@ export default function UserForm({ code }: UserFormProps) {
             + "&date=" + localStorage.getItem("date") + "&userId=" + response.data.id)
             .then((response) => {
                 console.log("Reservation created: ", response.data);
-                localStorage.setItem("reservationToken", response.data.reservationToken);
+                // navigate to success page
+                navigate("/success?reservationToken=" + response.data.reservationToken);
             })
             .catch((error) => {
                 console.error("Error creating reservation: ", error);
@@ -72,40 +73,37 @@ export default function UserForm({ code }: UserFormProps) {
         .catch((error) => {
             console.error("Error creating user: ", error);
         });
-
-        // navigate to success page
-        navigate("/success");
     }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <FormControl defaultValue="" required>
             <Label>Name</Label>
-            <StyledInput placeholder="Write your name here" onChange={(e) => setName(e.target.value)} />
+            <StyledInput placeholder="Write your name here" onChange={(e) => setName(e.target.value)} id='nameInput' />
             <HelperText />
         </FormControl>
 
         <FormControl defaultValue="" required>
             <Label>Email</Label>
-            <StyledInput placeholder="Write your email here" onChange={(e) => setEmail(e.target.value)} />
+            <StyledInput placeholder="Write your email here" onChange={(e) => setEmail(e.target.value)} id='emailInput' />
             <HelperText />
         </FormControl>
 
         <FormControl defaultValue="" required>
             <Label>Address</Label>
-            <StyledInput placeholder="Write your address here" onChange={(e) => setAddress(e.target.value)} />
+            <StyledInput placeholder="Write your address here" onChange={(e) => setAddress(e.target.value)} id='addressInput' />
             <HelperText />
         </FormControl>
 
         <FormControl defaultValue="" required>
             <Label>City</Label>
-            <StyledInput placeholder="Write your city here" onChange={(e) => setCity(e.target.value)} />
+            <StyledInput placeholder="Write your city here" onChange={(e) => setCity(e.target.value)} id='cityInput' />
             <HelperText />
         </FormControl>
 
         <FormControl defaultValue="" required>
             <Label>Zip Code</Label>
-            <StyledInput placeholder="Write your zip code here" onChange={(e) => setZipCode(e.target.value)} />
+            <StyledInput placeholder="Write your zip code here" onChange={(e) => setZipCode(e.target.value)} id='zipCodeInput' />
             <HelperText />
         </FormControl>
 
@@ -113,17 +111,18 @@ export default function UserForm({ code }: UserFormProps) {
             <Label>Credit Card Type</Label>
             <Select defaultValue="visa"
             sx={{ width: 350 }}
+            id='creditCardTypeInput'
             >
-                <MenuItem value="visa" onClick={() => setCreditCardType("visa")}>Visa</MenuItem>
-                <MenuItem value="mastercard" onClick={() => setCreditCardType("mastercard")}>Mastercard</MenuItem>
-                <MenuItem value="maestro" onClick={() => setCreditCardType("maestro")}>Maestro</MenuItem>
+                <MenuItem value="visa" onClick={() => setCreditCardType("visa")} id='creditCardVisa'>Visa</MenuItem>
+                <MenuItem value="mastercard" onClick={() => setCreditCardType("mastercard")} id='creditCardMaster'>Mastercard</MenuItem>
+                <MenuItem value="maestro" onClick={() => setCreditCardType("maestro")} id='creditCardMaestro'>Maestro</MenuItem>
             </Select>
             <HelperText />
         </FormControl>
 
         <FormControl defaultValue="" required>
             <Label>Credit Card Number</Label>
-            <StyledInput placeholder="Write your credit card number here" onChange={(e) => setCreditCardNumber(e.target.value)} />
+            <StyledInput placeholder="Write your credit card number here" onChange={(e) => setCreditCardNumber(e.target.value)} id='creditCardNumberInput' />
             <HelperText />
         </FormControl>
 
@@ -137,17 +136,17 @@ export default function UserForm({ code }: UserFormProps) {
 
         <FormControl defaultValue="" required>
             <Label>CVV</Label>
-            <StyledInput placeholder="Write your CVV here" onChange={(e) => setCvv(e.target.value)} />
+            <StyledInput placeholder="Write your CVV here" onChange={(e) => setCvv(e.target.value)} id='cvvInput' />
             <HelperText />
         </FormControl>
 
         <FormControl defaultValue="" required>
             <Label>Name on Card</Label>
-            <StyledInput placeholder="Write your name on card here" onChange={(e) => setNameOnCard(e.target.value)} />
+            <StyledInput placeholder="Write your name on card here" onChange={(e) => setNameOnCard(e.target.value)} id='nameOnCardInput' />
             <HelperText />
         </FormControl>
 
-        <Button variant="contained" sx={{backgroundColor: '#a2e53f', color: 'black', marginTop: "20px"}} onClick={purchaseTrip}>
+        <Button variant="contained" sx={{backgroundColor: '#a2e53f', color: 'black', marginTop: "20px"}} onClick={purchaseTrip} id='purchaseButton'>
             Pay
         </Button>
     </div>

@@ -57,6 +57,7 @@ export default function TripCard({ code }: TripCardProps) {
           <Button size="small" variant="outlined"
                 sx={{ backgroundColor: '#a2e53f', color: 'black'}}
                 onClick={buyTrip}
+                id={`buyTrip${code}`}
                 >Buy</Button>
         </CardActions>
       </Card>

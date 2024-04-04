@@ -85,15 +85,15 @@ export default function Pay() {
                             sx={{ minWidth: 120 }}
                             style={{ margin: "10px" }}
                         >
-                            <InputLabel id="demo-simple-select-label">Choose Currency</InputLabel>
+                            <InputLabel id="currencyLabel">Choose Currency</InputLabel>
                             <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
+                                labelId="currencyLabel"
+                                id="currencySelect"
                                 label="Currency"
                                 defaultValue={"EUR"}
                             >
                                 {coins.map((coin) => (
-                                    <MenuItem value={coin} onClick={() => chooseCurrency(coin)}>
+                                    <MenuItem value={coin} onClick={() => chooseCurrency(coin)} id={"coin" + `currency${coin}`}>
                                         {coin}
                                     </MenuItem>
                                 ))}

@@ -49,18 +49,19 @@ export default function FindReservation() {
             >
                 <FormControl defaultValue="" required>
                     <Label>Email</Label>
-                    <StyledInput placeholder="Write your email here" onChange={(e) => setEmail(e.target.value)} />
+                    <StyledInput placeholder="Write your email here" onChange={(e) => setEmail(e.target.value)} id="emailInput" />
                     <HelperText />
                 </FormControl>
                 <FormControl defaultValue="" required>
                     <Label>Token</Label>
-                    <StyledInput placeholder="Write your reservation token here" onChange={(e) => setReservationToken(e.target.value)} />
+                    <StyledInput placeholder="Write your reservation token here" onChange={(e) => setReservationToken(e.target.value)} id="tokenInput" />
                     <HelperText />
                 </FormControl>
 
                 <Button variant="outlined" style={{ margin: "30px" }}
                     sx={{ backgroundColor: '#a2e53f', color: 'black', padding: "10px 12px", borderRadius: "8px", fontSize: "0.875rem", fontWeight: 400, lineHeight: 1.5 }}
                     onClick={getReservation}
+                    id="findReservation"
                 >
                     Get Reservation
                 </Button>

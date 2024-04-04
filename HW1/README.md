@@ -47,7 +47,7 @@ docker compose up --build
 
 ```bash
 # With the docker compose running
-docker exec -it hw1-backend-1 bash -c "mvn test"
+mvn test
 ```
 
 ## 5. Author

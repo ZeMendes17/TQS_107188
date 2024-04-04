@@ -35,6 +35,7 @@ export default function Trips() {
                 {trips.map((trip) => (
                     <TripCard
                         code={trip.tripCode}
+                        id={"code_" + trip.tripCode}
                     />
                 ))}
             </Container>

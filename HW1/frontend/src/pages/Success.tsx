@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function Success() {
     // get reservationToken from local storage
-    const reservationToken = localStorage.getItem("reservationToken");
+    const queryParams = new URLSearchParams(location.search);
     const name = localStorage.getItem("name");
+    const reservationToken = queryParams.get("reservationToken");
     const [reservation, setReservation] = useState({});
     const navigate = useNavigate();
 
@@ -36,7 +37,7 @@ export default function Success() {
                 <p>{name}, your trip token is: <b>{reservationToken}</b>.
                 You can check your reservations by clicking the button below</p>
 
-                <Button variant="contained" sx={{backgroundColor: '#a2e53f', color: 'black', marginTop: "20px"}} onClick={navToReservations}>
+                <Button variant="contained" sx={{backgroundColor: '#a2e53f', color: 'black', marginTop: "20px"}} onClick={navToReservations} id="checkReservations">
                     Check Reservations
                 </Button>
             </div>
