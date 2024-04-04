@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pt.ua.deti</groupId>
-    <artifactId>lab7_1</artifactId>
+    <artifactId>lab7_1restAssured</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

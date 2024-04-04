@@ -22,6 +22,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
+
 @WebMvcTest(CarController.class)
 public class CarControllerTest {
     @Autowired
@@ -29,6 +31,10 @@ public class CarControllerTest {
 
     @MockBean
     private CarManagerService carManagerService;
+
+    // NEW: Rest Assured
+    @Autowired
+    private MockMvc mockMvc;
 
     // Test implementations
     @Test
@@ -39,17 +45,20 @@ public class CarControllerTest {
         Car car3 = new Car("Citroen", "C3");
         // mock the behavior of the carManagerService
         when(carManagerService.getAllCars()).thenReturn(Arrays.asList(car, car2, car3));
-        mvc.perform(get("/api/v1/cars").contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$", hasSize(3)))
-                .andExpect(jsonPath("$[0].maker", is(car.getMaker())))
-                .andExpect(jsonPath("$[0].model", is(car.getModel())))
-                .andExpect(jsonPath("$[1].maker", is(car2.getMaker())))
-                .andExpect(jsonPath("$[1].model", is(car2.getModel())))
-                .andExpect(jsonPath("$[2].maker", is(car3.getMaker())))
-                .andExpect(jsonPath("$[2].model", is(car3.getModel())));
+
+        RestAssuredMockMvc.given()
+                .mockMvc(mockMvc)
+                .when()
+                .get("/api/v1/cars")
+                .then()
+                .statusCode(200)
+                .body("$", hasSize(3))
+                .body("[0].maker", is(car.getMaker()))
+                .body("[0].model", is(car.getModel()))
+                .body("[1].maker", is(car2.getMaker()))
+                .body("[1].model", is(car2.getModel()))
+                .body("[2].maker", is(car3.getMaker()))
+                .body("[2].model", is(car3.getModel()));
     }
 
     @Test
@@ -58,12 +67,15 @@ public class CarControllerTest {
         Car car = new Car("Toyota", "Corolla");
         // mock the behavior of the carManagerService
         when(carManagerService.getCarDetails(anyLong())).thenReturn(Optional.of(car));
-        mvc.perform(get("/api/v1/cars/1").contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.maker", is(car.getMaker())))
-                .andExpect(jsonPath("$.model", is(car.getModel())));
+
+        RestAssuredMockMvc.given()
+                .mockMvc(mockMvc)
+                .when()
+                .get("/api/v1/cars/1")
+                .then()
+                .statusCode(200)
+                .body("maker", is(car.getMaker()))
+                .body("model", is(car.getModel()));
     }
 
     @Test
@@ -72,12 +84,25 @@ public class CarControllerTest {
         Car car = new Car("Toyota", "Corolla");
         // mock the behavior of the carManagerService
         when(carManagerService.saveCar(car)).thenReturn(car);
-        mvc.perform(post("/api/v1/cars").contentType(MediaType.APPLICATION_JSON).content(JsonUtils.toJson(car)))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.maker", is(car.getMaker())))
-                .andExpect(jsonPath("$.model", is(car.getModel())));
+//        mvc.perform(post("/api/v1/cars").contentType(MediaType.APPLICATION_JSON).content(JsonUtils.toJson(car)))
+//                .andDo(print())
+//                .andExpect(status().isOk())
+//                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+//                .andExpect(jsonPath("$.maker", is(car.getMaker())))
+//                .andExpect(jsonPath("$.model", is(car.getModel())));
+//
+//        verify(carManagerService, times(1)).saveCar(car);
+
+        RestAssuredMockMvc.given()
+                .mockMvc(mockMvc)
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
+                .body(JsonUtils.toJson(car))
+                .when()
+                .post("/api/v1/cars")
+                .then()
+                .statusCode(200)
+                .body("maker", is(car.getMaker()))
+                .body("model", is(car.getModel()));
 
         verify(carManagerService, times(1)).saveCar(car);
     }
