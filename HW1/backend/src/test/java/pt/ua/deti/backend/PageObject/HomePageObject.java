@@ -18,7 +18,7 @@ public class HomePageObject {
     @FindBy(id = "dest_Lisboa")
     private WebElement dest_Lisboa;
 
-    @FindBy(css = ".MuiIconButton-edgeEnd path")
+    @FindBy(css = ".MuiIconButton-edgeEnd > .MuiSvgIcon-root")
     private WebElement searchIcon;
 
     @FindBy(css = ".MuiDayCalendar-weekContainer:nth-child(4) > .MuiButtonBase-root:nth-child(7)")
@@ -26,6 +26,10 @@ public class HomePageObject {
 
     @FindBy(id = "searchButton")
     private WebElement searchButton;
+    
+    @FindBy(css = "body")
+    private WebElement body; // needed to click outside the select, else the select remains open and the tests fail
+
 
     public HomePageObject(WebDriver driver) {
         driver.get("http://localhost:3030/");
@@ -59,11 +63,13 @@ public class HomePageObject {
     public void selectOrigin() {
         originSelect.click();
         origin_Porto.click();
+        body.click();
     }
 
     public void selectDestination() {
         destSelect.click();
         dest_Lisboa.click();
+        body.click();
     }
 
     public void selectDate() {

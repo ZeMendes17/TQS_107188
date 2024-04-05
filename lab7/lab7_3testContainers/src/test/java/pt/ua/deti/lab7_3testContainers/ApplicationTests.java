@@ -32,7 +32,7 @@ public class ApplicationTests {
         .withPassword("password");
 
     @Autowired
-    private static BookRepo bookRepo;
+    private BookRepo bookRepo;
 
     @DynamicPropertySource
     static void properties(DynamicPropertyRegistry registry) {
@@ -42,21 +42,27 @@ public class ApplicationTests {
     }
 
     // Insert some content
-    @BeforeAll
-    public static void setup() {
-        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
-        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
-    }
+    // @BeforeAll
+    // public static void setup() {
+    //     bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
+    //     bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+    // }
 
     // Read it back
     @Test
     public void allBooksTest() {
+        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
+        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+
         List<Book> books = bookRepo.findAll();
         assertEquals(2, books.size());
     }
 
     @Test
     public void findBookByTitleTest() {
+        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
+        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+
         List<Book> books = bookRepo.findByTitle("The Hobbit");
         assertEquals(1, books.size());
         Book book= books.get(0);
@@ -65,6 +71,9 @@ public class ApplicationTests {
 
     @Test
     public void findBookByAuthorTest() {
+        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
+        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+
         List<Book> books = bookRepo.findByAuthor("J.R.R. Tolkien");
         assertEquals(2, books.size());
     }

@@ -23,15 +23,6 @@ public class SeleniumTest {
     @BeforeAll
     public static void setup() {
         WebDriverManager.firefoxdriver().setup();
-
-        // FirefoxOptions options = new FirefoxOptions();
-        // options.addArguments("--headless");
-
-        // // Optionally, set the path to GeckoDriver if it's not in the system's PATH
-        // // System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");
-
-        // // Initialize the FirefoxDriver with the configured options
-        // driver = new FirefoxDriver(options);
     }
 
     @Test
