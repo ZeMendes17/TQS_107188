@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3030")
 @RestController
 @RequestMapping("/api/v1")
 public class ExchangeRateController {

@@ -41,7 +41,6 @@ public class ExchangeRateApi {
                     .collect(Collectors.toMap(rate -> rate[0].replace("\"", "").replace("\n", "").trim(),
                             rate -> Float.parseFloat(rate[1])));
         } catch (Exception e) {
-            e.printStackTrace();
             log.error("Failed to retrieve exchange rates: " + e.getMessage());
             return null;
         }
@@ -61,7 +60,6 @@ public class ExchangeRateApi {
                     .collect(Collectors.toList());
             
         } catch (Exception e) {
-            e.printStackTrace();
             log.error("Failed to retrieve coins: " + e.getMessage());
             return null;
         }

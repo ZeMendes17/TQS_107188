@@ -15,7 +15,7 @@ import pt.ua.deti.backend.entity.Trip;
 import java.util.List;
 
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3030")
 @RestController
 @RequestMapping("/api/v1")
 public class TripController {
