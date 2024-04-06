@@ -20,17 +20,17 @@ public class UserService {
 
     // methods
     public User save(User user) {
-        log.info("Saving user: " + user);
+        log.info("Saving user: {}", user);
         return userRepo.save(user);
     }
 
     public User getUserByEmail(String email) {
-        log.info("Getting user by email: " + email);
+        log.info("Getting user by email: {}", email);
         return userRepo.findByEmail(email);
     }
 
     public User getUserById(Integer id) {
-        log.info("Getting user by id: " + id);
+        log.info("Getting user by id: {}", id);
         return userRepo.findById(id).orElse(null);
     }
 }

@@ -6,67 +6,67 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-LI-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-LI-002', 'Porto', 'Lisboa', '10:00:00', 20);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-LI-003', 'Porto', 'Lisboa', '12:00:00', 20);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-LI-004', 'Porto', 'Lisboa', '16:00:00', 20);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-LI-005', 'Porto', 'Lisboa', '20:00:00', 20);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-LI-006', 'Porto', 'Lisboa', '23:00:00', 20);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Lisboa to Porto
@@ -74,67 +74,67 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-PO-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-PO-002', 'Lisboa', 'Porto', '11:00:00', 22);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-PO-003', 'Lisboa', 'Porto', '14:00:00', 25);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-PO-004', 'Lisboa', 'Porto', '18:00:00', 23);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-PO-005', 'Lisboa', 'Porto', '20:00:00', 20);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-PO-006', 'Lisboa', 'Porto', '22:00:00', 22);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Porto to Braga
@@ -142,67 +142,67 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-BR-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-BR-002', 'Porto', 'Braga', '11:00:00', 16);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-BR-003', 'Porto', 'Braga', '13:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-BR-004', 'Porto', 'Braga', '15:00:00', 17);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-BR-005', 'Porto', 'Braga', '17:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-BR-006', 'Porto', 'Braga', '19:00:00', 16);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Braga to Porto
@@ -210,67 +210,67 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-PO-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-PO-002', 'Braga', 'Porto', '11:00:00', 16);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-PO-003', 'Braga', 'Porto', '13:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-PO-004', 'Braga', 'Porto', '15:00:00', 17);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-PO-005', 'Braga', 'Porto', '17:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-PO-006', 'Braga', 'Porto', '19:00:00', 16);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Lisboa to Braga
@@ -278,56 +278,56 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-BR-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-BR-002', 'Lisboa', 'Braga', '10:00:00', 32);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-BR-003', 'Lisboa', 'Braga', '17:00:00', 35);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-BR-004', 'Lisboa', 'Braga', '19:00:00', 33);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-BR-005', 'Lisboa', 'Braga', '21:00:00', 30);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Braga to Lisboa
@@ -335,45 +335,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-LI-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-LI-002', 'Braga', 'Lisboa', '10:00:00', 32);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-LI-003', 'Braga', 'Lisboa', '17:00:00', 35);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-LI-004', 'Braga', 'Lisboa', '22:00:00', 33);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Porto to Aveiro
@@ -381,45 +381,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-AV-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-AV-002', 'Porto', 'Aveiro', '12:00:00', 12);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-AV-003', 'Porto', 'Aveiro', '15:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('PO-AV-004', 'Porto', 'Aveiro', '18:00:00', 13);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Aveiro to Porto
@@ -427,45 +427,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-PO-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-PO-002', 'Aveiro', 'Porto', '13:00:00', 12);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-PO-003', 'Aveiro', 'Porto', '16:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-PO-004', 'Aveiro', 'Porto', '19:00:00', 13);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Lisboa to Aveiro
@@ -473,45 +473,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-AV-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-AV-002', 'Lisboa', 'Aveiro', '10:00:00', 27);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-AV-003', 'Lisboa', 'Aveiro', '17:00:00', 30);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-AV-004', 'Lisboa', 'Aveiro', '19:00:00', 28);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Aveiro to Lisboa
@@ -519,45 +519,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-LI-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-LI-002', 'Aveiro', 'Lisboa', '10:00:00', 27);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-LI-003', 'Aveiro', 'Lisboa', '17:00:00', 30);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-LI-004', 'Aveiro', 'Lisboa', '22:00:00', 28);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Braga to Aveiro
@@ -565,45 +565,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-AV-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-AV-002', 'Braga', 'Aveiro', '12:00:00', 22);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-AV-003', 'Braga', 'Aveiro', '15:00:00', 25);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('BR-AV-004', 'Braga', 'Aveiro', '18:00:00', 19);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Aveiro to Braga
@@ -611,45 +611,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-BR-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-BR-002', 'Aveiro', 'Braga', '13:00:00', 22);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-BR-003', 'Aveiro', 'Braga', '16:00:00', 25);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-BR-004', 'Aveiro', 'Braga', '19:00:00', 19);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Coimbra to Lisboa
@@ -657,45 +657,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-LI-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-LI-002', 'Coimbra', 'Lisboa', '12:00:00', 22);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-LI-003', 'Coimbra', 'Lisboa', '15:00:00', 16);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-LI-004', 'Coimbra', 'Lisboa', '18:00:00', 23);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Lisboa to Coimbra
@@ -703,45 +703,45 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-CO-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-CO-002', 'Lisboa', 'Coimbra', '12:00:00', 22);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-CO-003', 'Lisboa', 'Coimbra', '15:00:00', 16);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('LI-CO-004', 'Lisboa', 'Coimbra', '18:00:00', 23);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Coimbra to Aveiro
@@ -749,56 +749,56 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-AV-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-AV-002', 'Coimbra', 'Aveiro', '12:00:00', 12);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-AV-003', 'Coimbra', 'Aveiro', '15:00:00', 15);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-AV-004', 'Coimbra', 'Aveiro', '18:00:00', 13);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('CO-AV-005', 'Coimbra', 'Aveiro', '21:00:00', 10);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 
 -- Trips from Aveiro to Coimbra
@@ -806,64 +806,64 @@ INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-CO-00
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-CO-002', 'Aveiro', 'Coimbra', '12:00:00', 12);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-CO-003', 'Aveiro', 'Coimbra', '15:00:00', 8);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-CO-004', 'Aveiro', 'Coimbra', '18:00:00', 13);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-CO-005', 'Aveiro', 'Coimbra', '21:00:00', 10);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');
 
 INSERT INTO trip (trip_code, origin, destination, time, price) VALUES ('AV-CO-006', 'Aveiro', 'Coimbra', '23:00:00', 12);
 -- Get the id of the last inserted trip
 SET @trip_id = LAST_INSERT_ID();
 -- Insert the seats for the trip
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A1');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'A2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B3');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'B4');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'C2');
-INSERT INTO seat (trip_id, seat) VALUES (@trip_id, 'D1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A1');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'A2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B3');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'B4');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'C2');
+INSERT INTO seat (trip_id, seat_number) VALUES (@trip_id, 'D1');

@@ -47,20 +47,20 @@ public class ReservationController {
     // methods
     @PostMapping("/reservation")
     public Reservation saveReservation(@RequestParam String code, @RequestParam String date, @RequestParam Integer userId) {
-        log.info("POST /reservation?code=" + code + "&date=" + date + "&userId=" + userId);
+        log.info("POST /reservation?code={}&date={}&userId={}", code, date, userId);
 
         Trip trip = tripService.searchTripByCode(code);
         List<Seat> seats = seatService.getSeatsByTripId(trip.getId());
         Seat seat = seats.get(0);
-        String token = code + "_" + seat.getSeat();
-        seatService.deleteBySeatAndTripId(seat.getSeat(), trip.getId());
+        String token = code + "_" + seat.getSeatNumber();
+        seatService.deleteBySeatNumberAndTripId(seat.getSeatNumber(), trip.getId());
         User user = userService.getUserById(userId);
         return reservationService.saveWithToken(token, date, user);
     }
     
     @GetMapping("/reservation")
     public Map<String, String> getReservationByToken(@RequestParam String token) {
-        log.info("GET /reservation?token=" + token);
+        log.info("GET /reservation?token={}", token);
 
         Map<String, String> response = new HashMap<>();
         Reservation r = reservationService.getReservationByToken(token);

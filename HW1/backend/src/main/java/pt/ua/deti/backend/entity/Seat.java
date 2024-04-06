@@ -19,7 +19,7 @@ public class Seat {
     private Integer id;
 
     @Column(nullable = false)
-    private String seat;
+    private String seatNumber;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "trip_id")
@@ -29,8 +29,8 @@ public class Seat {
     public Seat() {
     }
 
-    public Seat(String seat, Trip trip) {
-        this.seat = seat;
+    public Seat(String seatNumber, Trip trip) {
+        this.seatNumber = seatNumber;
         this.trip = trip;
     }
 
@@ -44,12 +44,12 @@ public class Seat {
         this.id = id;
     }
 
-    public String getSeat() {
-        return seat;
+    public String getSeatNumber() {
+        return seatNumber;
     }
 
-    public void setSeat(String seat) {
-        this.seat = seat;
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
     }
 
     public Trip getTrip() {
@@ -62,6 +62,6 @@ public class Seat {
 
     @Override
     public String toString() {
-        return "Seat [id=" + id + ", seat=" + seat + ", trip=" + trip + "]";
+        return "Seat [id=" + id + ", seatNumber=" + seatNumber + ", trip=" + trip + "]";
     }
 }

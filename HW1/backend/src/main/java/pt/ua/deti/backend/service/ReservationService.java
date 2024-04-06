@@ -21,18 +21,18 @@ public class ReservationService {
 
     // methods
     public Reservation save(Reservation reservation) {
-        log.info("Saving reservation: " + reservation);
+        log.info("Saving reservation: {}", reservation);
         return reservationRepo.save(reservation);
     }
 
     public Reservation saveWithToken(String token, String date, User user) {
-        log.info("Saving reservation with token: " + token + ", date: " + date + ", user: " + user);
+        log.info("Saving reservation with token: {}, date: {}, user: {}", token, date, user);
         Reservation reservation = new Reservation(token, date, user);
         return reservationRepo.save(reservation);
     }
 
     public Reservation getReservationByToken(String token) {
-        log.info("Getting reservation by token: " + token);
+        log.info("Getting reservation by token: {}", token);
         return reservationRepo.findByReservationToken(token);
     }
 }

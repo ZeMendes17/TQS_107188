@@ -22,7 +22,7 @@ public class TripService {
 
     // methods
     public Trip save(Trip trip) {
-        log.info("Saving trip: " + trip);
+        log.info("Saving trip: {}", trip);
 
         return tripRepo.save(trip);
     }
@@ -59,12 +59,12 @@ public class TripService {
     }
 
     public List<Trip> searchTrips(String origin, String destination) {
-        log.info("Getting trips from " + origin + " to " + destination);
+        log.info("Getting trips from {} to {}", origin, destination);
         return tripRepo.findByOriginAndDestination(origin, destination);
     }
 
     public Trip searchTripByCode(String code) {
-        log.info("Getting trip with code: " + code);
+        log.info("Getting trip with code: {}", code);
         return tripRepo.findByTripCode(code);
     }
 }

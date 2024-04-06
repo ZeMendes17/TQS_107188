@@ -46,14 +46,14 @@ public class TripController {
     // method that given a origin and a destination returns all trips that have that origin and destination
     @GetMapping("/trip/search")
     public List<Trip> searchTrips(@RequestParam String origin, @RequestParam String destination) {
-        log.info("GET /trip/search?origin=" + origin + "&destination=" + destination);
+        log.info("GET /trip/search?origin={}&destination={}", origin, destination);
         return tripService.searchTrips(origin, destination);
     }
 
     // method that given a code returns the trip with that code
     @GetMapping("/trip/search/code")
     public Trip searchTripByCode(@RequestParam String code) {
-        log.info("GET /trip/search/code?code=" + code);
+        log.info("GET /trip/search/code?code={}", code);
         return tripService.searchTripByCode(code);
     }
 }

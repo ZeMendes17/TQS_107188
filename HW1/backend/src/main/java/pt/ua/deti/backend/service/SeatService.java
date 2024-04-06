@@ -22,13 +22,13 @@ public class SeatService {
 
     // methods
     @Transactional
-    public void deleteBySeatAndTripId(String seat, Integer tripId) {
-        log.info("Deleting seat: " + seat + " from trip with id: " + tripId);
-        seatRepo.deleteBySeatAndTripId(seat, tripId);
+    public void deleteBySeatNumberAndTripId(String seatNumber, Integer tripId) {
+        log.info("Deleting seat: {} from trip with id: {}", seatNumber, tripId);
+        seatRepo.deleteBySeatNumberAndTripId(seatNumber, tripId);
     }
 
     public List<Seat> getSeatsByTripId(Integer tripId) {
-        log.info("Getting seats from trip with id: " + tripId);
+        log.info("Getting seats from trip with id: {}", tripId);
         return seatRepo.findByTripId(tripId);
     }
 }

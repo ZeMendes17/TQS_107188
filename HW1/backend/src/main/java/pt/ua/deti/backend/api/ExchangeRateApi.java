@@ -4,6 +4,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 import java.net.http.HttpClient;
 import java.net.URI;
 
@@ -24,9 +25,6 @@ public class ExchangeRateApi {
     private static final String BASE_CURRENCY = "EUR";
     private static final Logger log = LoggerFactory.getLogger(ExchangeRateApi.class);
 
-    public ExchangeRateApi() {
-    }
-
     @Cacheable("exchangeRate")
     public Map<String, Float> getExchangeRate() {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(BASE_URL + apiKey + "/latest/" + BASE_CURRENCY)).build();
@@ -40,10 +38,15 @@ public class ExchangeRateApi {
             return List.of(rates.split(",")).stream().map(rate -> rate.split(":"))
                     .collect(Collectors.toMap(rate -> rate[0].replace("\"", "").replace("\n", "").trim(),
                             rate -> Float.parseFloat(rate[1])));
-        } catch (Exception e) {
-            log.error("Failed to retrieve exchange rates: " + e.getMessage());
-            return null;
-        }
+            } catch (InterruptedException e) {
+                // Restore interrupted state
+                Thread.currentThread().interrupt();
+                log.error("Thread was interrupted while retrieving exchange rates: {}", e.getMessage());
+                return new HashMap<>();
+            } catch (Exception e) {
+                log.error("Failed to retrieve exchange rates: {}", e.getMessage());
+                return new HashMap<>();
+            }
     }
 
     @Cacheable("exchangeRateCoins")
@@ -59,16 +62,23 @@ public class ExchangeRateApi {
             return List.of(coins.split(",")).stream().map(coin -> coin.split(":")[0].replace("\"", "").replace("\n", "").trim()).sorted()
                     .collect(Collectors.toList());
             
+        } catch (InterruptedException e) {
+            // Restore interrupted state
+            Thread.currentThread().interrupt();
+            log.error("Thread was interrupted while retrieving coins: {}", e.getMessage());
+            return List.of();
         } catch (Exception e) {
-            log.error("Failed to retrieve coins: " + e.getMessage());
-            return null;
+            log.error("Failed to retrieve coins: {}", e.getMessage());
+            return List.of();
         }
 
     }
 
-    @CacheEvict(value = "exchangeRate", allEntries = true)
+    @CacheEvict(value = { "exchangeRate", "exchangeRateCoins" }, allEntries = true)
     @Scheduled(fixedRate = 600000) // 10 minutes in milliseconds
     public void evictCache() {
         log.info("Cache evicted");
     }
+
+
 }

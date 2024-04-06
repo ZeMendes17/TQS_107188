@@ -36,7 +36,7 @@ public class UserController {
     
     @GetMapping("/user")
     public User getUser(@RequestParam String email) {
-        log.info("GET /user?email=" + email);
+        log.info("GET /user?email={}", email);
         return userService.getUserByEmail(email);
     }
     

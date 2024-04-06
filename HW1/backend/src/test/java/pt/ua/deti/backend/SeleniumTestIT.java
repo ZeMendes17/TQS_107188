@@ -26,7 +26,7 @@ public class SeleniumTestIT {
     }
 
     @Test
-    public void test(FirefoxDriver driver) {
+    void test(FirefoxDriver driver) {
         
         homePageObject = new HomePageObject(driver);
         tripsPageObject = new TripsPageObject(driver);
