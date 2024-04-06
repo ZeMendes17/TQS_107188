@@ -33,6 +33,11 @@ public class InMemoryCache<K, V> {
         cache.remove(key);
     }
 
+    @Override
+    public String toString() {
+        return cache.toString();
+    }
+
     private class CacheEvict implements Runnable {
         @Override
         public void run() {

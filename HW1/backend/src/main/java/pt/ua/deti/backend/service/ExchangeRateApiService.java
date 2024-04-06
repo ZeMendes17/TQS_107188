@@ -103,6 +103,21 @@ public class ExchangeRateApiService {
             log.error("Failed to retrieve coins: {}", e.getMessage());
             return List.of();
         }
+    }
 
+    public CacheStatistics getExchangeRateCacheStatistics() {
+        return exchangeRateCacheStatistics;
+    }
+
+    public CacheStatistics getCoinsCacheStatistics() {
+        return coinsCacheStatistics;
+    }
+
+    public InMemoryCache<String, Map<String, Float>> getExchangeRateCache() {
+        return exchangeRateCache;
+    }
+
+    public InMemoryCache<String, List<String>> getCoinsCache() {
+        return coinsCache;
     }
 }

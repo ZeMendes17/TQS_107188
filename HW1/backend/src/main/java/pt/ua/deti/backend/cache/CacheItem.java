@@ -29,4 +29,9 @@ public class CacheItem<V> {
     public boolean isExpired() {
         return System.currentTimeMillis() > expirationTime;
     }
+
+    @Override
+    public String toString() {
+        return "{value: " + value + ", ttl: " + ttl + ", expirationTime: " + expirationTime + "}";
+    }
 }
