@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class InMemoryCache<K, V> {
 
     private final Map<K, CacheItem<V>> cache;
-    private static final int defaultTtl = 60;
+    private static final int DEFAULT_TTL = 60;
 
     // Constructor
     public InMemoryCache() {
@@ -23,7 +23,7 @@ public class InMemoryCache<K, V> {
     }
 
     public void put(K key, V value) {
-        cache.put(key, new CacheItem<>(value, defaultTtl));
+        cache.put(key, new CacheItem<>(value, DEFAULT_TTL));
     }
 
     public void put(K key, V value, int ttl) {
