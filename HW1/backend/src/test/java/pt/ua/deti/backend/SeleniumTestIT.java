@@ -13,7 +13,7 @@ import pt.ua.deti.backend.PageObject.ReservationPageObject;
 import pt.ua.deti.backend.PageObject.TripsPageObject;
 
 @ExtendWith(SeleniumJupiter.class)
-public class SeleniumTest {
+public class SeleniumTestIT {
     private static HomePageObject homePageObject;
     private static TripsPageObject tripsPageObject;
     private static PayPageObject payPageObject;
