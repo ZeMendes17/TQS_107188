@@ -3,7 +3,7 @@ package pt.ua.deti.backend.entity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-public class ReservationTest {
+class ReservationTest {
     @Test
     void gettersAndSettersReservationTest() {
         Reservation reservation = new Reservation();

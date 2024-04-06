@@ -3,7 +3,7 @@ package pt.ua.deti.backend.entity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-public class TripTest {
+class TripTest {
     @Test
     void gettersAndSettersTripTest() {
         Trip trip = new Trip();

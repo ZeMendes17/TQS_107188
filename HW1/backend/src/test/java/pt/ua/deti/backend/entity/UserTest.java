@@ -3,7 +3,7 @@ package pt.ua.deti.backend.entity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-public class UserTest {
+class UserTest {
     @Test
     void gettersAndSettersUserTest() {
         User user = new User();
