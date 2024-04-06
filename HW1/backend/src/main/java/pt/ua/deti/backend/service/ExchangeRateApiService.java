@@ -37,10 +37,12 @@ public class ExchangeRateApiService {
         Map<String, Float> exchangeRate = exchangeRateCache.get("exchangeRate");
         if (exchangeRate != null) {
             log.info("Exchange rates retrieved from cache successfully");
+            log.info("Cache hit");
             exchangeRateCacheStatistics.incrementHits();
             return exchangeRate;
         }
 
+        log.info("Cache miss");
         exchangeRateCacheStatistics.incrementMisses();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(BASE_URL + apiKey + "/latest/" + BASE_CURRENCY)).build();
 
@@ -54,6 +56,7 @@ public class ExchangeRateApiService {
                     .collect(Collectors.toMap(rate -> rate[0].replace("\"", "").replace("\n", "").trim(),
                             rate -> Float.parseFloat(rate[1])));
 
+            log.info("Cache put");
             exchangeRateCache.put("exchangeRate", formatedResponse, 120);
             exchangeRateCacheStatistics.incrementPuts();
             return formatedResponse;
@@ -73,10 +76,12 @@ public class ExchangeRateApiService {
         List<String> coinsFromCache = coinsCache.get("exchangeRateCoins");
         if (coinsFromCache != null) {
             log.info("Coins retrieved from cache successfully");
+            log.info("Cache hit");
             coinsCacheStatistics.incrementHits();
             return coinsFromCache;
         }
 
+        log.info("Cache miss");
         coinsCacheStatistics.incrementMisses();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(BASE_URL + apiKey + "/latest/" + BASE_CURRENCY)).build();
 
@@ -90,6 +95,7 @@ public class ExchangeRateApiService {
                     .replace("\"", "").replace("\n", "").trim()).sorted()
                     .collect(Collectors.toList());
 
+            log.info("Cache put");
             coinsCache.put("exchangeRateCoins", formatedResponse, 60 * 60);
             coinsCacheStatistics.incrementPuts();
             return formatedResponse;
@@ -106,18 +112,22 @@ public class ExchangeRateApiService {
     }
 
     public CacheStatistics getExchangeRateCacheStatistics() {
+        log.info("Getting exchange rate cache statistics: {}", exchangeRateCacheStatistics);
         return exchangeRateCacheStatistics;
     }
 
     public CacheStatistics getCoinsCacheStatistics() {
+        log.info("Getting coins cache statistics: {}", coinsCacheStatistics);
         return coinsCacheStatistics;
     }
 
     public InMemoryCache<String, Map<String, Float>> getExchangeRateCache() {
+        log.info("Getting exchange rate cache: {}", exchangeRateCache);
         return exchangeRateCache;
     }
 
     public InMemoryCache<String, List<String>> getCoinsCache() {
+        log.info("Getting coins cache: {}", coinsCache);
         return coinsCache;
     }
 }

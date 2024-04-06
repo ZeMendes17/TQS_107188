@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class InMemoryCache<K, V> {
+
     private final Map<K, CacheItem<V>> cache;
     private final int defaultTtl = 60;
 
