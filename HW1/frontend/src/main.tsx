@@ -5,6 +5,7 @@ import Trips from './pages/Trips.tsx';
 import Pay from './pages/Pay.tsx';
 import Success from './pages/Success.tsx';
 import Reservations from './pages/Reservations.tsx';
+import Failure from './pages/Failure.tsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/reservations",
     element: <Reservations />,
+  },
+  {
+    path: "/failure",
+    element: <Failure />,
+  
   },
   {
     path: "*",

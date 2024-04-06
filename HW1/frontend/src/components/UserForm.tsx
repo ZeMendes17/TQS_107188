@@ -64,6 +64,10 @@ export default function UserForm({ code }: UserFormProps) {
             .then((response) => {
                 console.log("Reservation created: ", response.data);
                 // navigate to success page
+                if (response.data === null) {
+                    alert("The trip is already full!");
+                    navigate("/failure");
+                }
                 navigate("/success?reservationToken=" + response.data.reservationToken);
             })
             .catch((error) => {
