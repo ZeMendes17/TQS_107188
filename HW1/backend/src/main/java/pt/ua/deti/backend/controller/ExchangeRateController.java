@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import pt.ua.deti.backend.api.ExchangeRateApi;
+import pt.ua.deti.backend.service.ExchangeRateApiService;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
@@ -20,11 +20,11 @@ import java.util.Map;
 @RequestMapping("/api/v1")
 public class ExchangeRateController {
     
-    private ExchangeRateApi exchangeRateApi;
+    private ExchangeRateApiService exchangeRateApi;
     private static final Logger log = LoggerFactory.getLogger(ExchangeRateController.class);
 
     @Autowired
-    public ExchangeRateController(ExchangeRateApi exchangeRateApi) {
+    public ExchangeRateController(ExchangeRateApiService exchangeRateApi) {
         this.exchangeRateApi = exchangeRateApi;
     }
 
