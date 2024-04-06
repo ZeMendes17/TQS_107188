@@ -36,13 +36,19 @@ public class PayPageObject {
     @FindBy(id = "creditCardNumberInput")
     private WebElement creditCardNumberInput;
 
+    @FindBy(css = ".MuiIconButton-edgeEnd > .MuiSvgIcon-root")
+    private WebElement calendar;
+
+    @FindBy(css = ".MuiPickersCalendarHeader-switchViewIcon")
+    private WebElement selectYear;
+
     @FindBy(css = ".MuiPickersYear-root:nth-child(126) > .MuiPickersYear-yearButton")
     private WebElement year;
 
     @FindBy(css = ".MuiIconButton-edgeStart > .MuiSvgIcon-root")
     private WebElement month;
 
-    @FindBy(css = ".MuiDayCalendar-weekContainer:nth-child(2) > .MuiButtonBase-root:nth-child(1)")
+    @FindBy(css = ".MuiDayCalendar-weekContainer:nth-child(4) > .MuiButtonBase-root:nth-child(3)")
     private WebElement day;
 
     @FindBy(id = "cvvInput")
@@ -53,6 +59,9 @@ public class PayPageObject {
     
     @FindBy(id = "purchaseButton")
     private WebElement purchaseButton;
+
+    @FindBy(css = "body")
+    private WebElement body; // needed to click outside the select, else the select remains open and the tests fail
 
     public PayPageObject(WebDriver driver) {
         driver.get("http://localhost:3030/");
@@ -170,14 +179,18 @@ public class PayPageObject {
     public void selectCurrency() {
         currencySelect.click();
         coincurrencyUSD.click();
+        body.click();
     }
 
     public void selectCreditCardType() {
         creditCardTypeInput.click();
         cardMaestro.click();
+        body.click();
     }
 
     public void selectDate() {
+        calendar.click();
+        selectYear.click();
         year.click();
         month.click();
         day.click();
