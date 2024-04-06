@@ -7,10 +7,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.seljup.SeleniumJupiter;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pt.ua.deti.backend.PageObject.HomePageObject;
-import pt.ua.deti.backend.PageObject.PayPageObject;
-import pt.ua.deti.backend.PageObject.ReservationPageObject;
-import pt.ua.deti.backend.PageObject.TripsPageObject;
+import pt.ua.deti.backend.pageObjects.HomePageObject;
+import pt.ua.deti.backend.pageObjects.PayPageObject;
+import pt.ua.deti.backend.pageObjects.ReservationPageObject;
+import pt.ua.deti.backend.pageObjects.TripsPageObject;
 
 @ExtendWith(SeleniumJupiter.class)
 public class SeleniumTestIT {

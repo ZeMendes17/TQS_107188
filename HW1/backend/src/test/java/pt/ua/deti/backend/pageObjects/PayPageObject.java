@@ -1,4 +1,4 @@
-package pt.ua.deti.backend.PageObject;
+package pt.ua.deti.backend.pageObjects;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
