@@ -23,7 +23,7 @@ import pt.ua.deti.backend.cache.InMemoryCache;
 public class CacheController {
 
     private ExchangeRateApiService exchangeRateApi;
-    private static final Logger log = LoggerFactory.getLogger(ExchangeRateController.class);
+    private static final Logger log = LoggerFactory.getLogger(CacheController.class);
 
     @Autowired
     public CacheController(ExchangeRateApiService exchangeRateApi) {

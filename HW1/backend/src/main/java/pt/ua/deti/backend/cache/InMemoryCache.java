@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class InMemoryCache<K, V> {
 
     private final Map<K, CacheItem<V>> cache;
-    private final int defaultTtl = 60;
+    private static final int defaultTtl = 60;
 
     // Constructor
     public InMemoryCache() {
@@ -50,10 +50,9 @@ public class InMemoryCache<K, V> {
                 }
 
                 // evict cache
-                for (K key : cache.keySet()) {
-                    CacheItem<V> item = cache.get(key);
-                    if (item.isExpired()) {
-                        evict(key);
+                for (Map.Entry<K, CacheItem<V>> entry : cache.entrySet()) {
+                    if (entry.getValue().isExpired()) {
+                        cache.remove(entry.getKey());
                     }
                 }
             }
