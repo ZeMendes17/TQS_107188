@@ -3,6 +3,8 @@ package pt.ua.deti.backend.cache;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import java.util.List;
+
 public class InMemoryCache<K, V> {
 
     private final Map<K, CacheItem<V>> cache;
@@ -12,6 +14,10 @@ public class InMemoryCache<K, V> {
     public InMemoryCache() {
         this.cache = new ConcurrentHashMap<>();
         new Thread(new CacheEvict()).start();
+    }
+
+    public boolean containsKey(K key) {
+        return cache.containsKey(key);
     }
 
     public V get(K key) {
@@ -32,6 +38,14 @@ public class InMemoryCache<K, V> {
 
     public void evict(K key) {
         cache.remove(key);
+    }
+
+    public void evictAll() {
+        cache.clear();
+    }
+
+    public List<K> getKeys() {
+        return List.copyOf(cache.keySet());
     }
 
     @Override
