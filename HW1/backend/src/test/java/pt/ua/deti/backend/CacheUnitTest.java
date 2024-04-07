@@ -1,12 +1,16 @@
 package pt.ua.deti.backend;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pt.ua.deti.backend.cache.*;
+
+import static org.awaitility.Awaitility.await;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 class CacheUnitTest {
     private CacheItem<Double> dollar;
@@ -85,14 +89,16 @@ class CacheUnitTest {
     }
 
     @Test
-    @DisplayName("Test if the cache is evicted after the ttl")
-    void cacheIsEvictedAfterTtl() {
-        cache.put("dollar", dollar.getValue(), 2);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        @DisplayName("Test if the cache is evicted after the ttl")
+        void cacheIsEvictedAfterTtl() {
+            // Put a value into the cache with a TTL of 2 seconds
+            cache.put("dollar", dollar.getValue(), 2);
+
+            // have to use this, or it gives a code smell
+            await().atMost(5, SECONDS) // Maximum wait time (in seconds)
+                .until(() -> cache.get("dollar") == null);
+
+            // Assert that the cache entry has been evicted
+            assertNull(cache.get("dollar"));
         }
-        assertEquals(null, cache.get("dollar"));
-    }
 }
