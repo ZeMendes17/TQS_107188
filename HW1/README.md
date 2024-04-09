@@ -22,7 +22,11 @@ The project must include:
  4. No user authentication is required for this project (web and API). Consider adding a “token”/code to the Reservation to facilitate later queries.
  5. Use some logger support (so that your solution produces a useful log of events).
 
- ## 3. Technologies stack
+ ## 3. Demo
+
+![Demo](./media/demo.gif)
+
+ ## 4. Technologies stack
 
 | Component | Technology |
 | --------- | ---------- |
@@ -31,7 +35,7 @@ The project must include:
 | Database | MySQL |
 | API | [Exchange Rate API](https://app.exchangerate-api.com/) |
 
-## 4. How to run
+## 5. How to run
 
 ```bash
 # In the root directory
@@ -43,13 +47,28 @@ docker compose up --build
 
 > The Website will be available at `http://localhost:3030` and the REST API at `http://localhost:8080`
 
-## 5. How to test
+## 6. How to test
+
+Docker compose must be running in a separate terminal in order to run the tests.
+
+### 6.1. Only Unit tests
 
 ```bash
-# With the docker compose running
 mvn test
 ```
 
-## 5. Author
+### 6.2. All tests (Unit + Integration)
+
+```bash
+mvn install failsafe:integration-test
+```
+
+## 7. API Documentation
+
+The API documentation can be found at `http://localhost:8080/swagger-ui/index.html`
+
+
+
+## 8. Author
 
 José Mendes, 107188
