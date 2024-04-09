@@ -18,7 +18,7 @@ import pt.ua.deti.backend.entity.Trip;
 import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
-public class TripServiceTest {
+class TripServiceTest {
 
     @Mock(lenient = true)
     private TripRepo tripRepo;

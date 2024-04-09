@@ -27,15 +27,10 @@ class SeatServiceTest {
 
     @Test
     void whenValidSeat_thenSeatShouldBeDeleted() {
-        Trip trip = new Trip("PO-LI-001", "Porto", "Lisboa", "10:10", 12.0f);
-        Seat seat = new Seat("B3", trip);
-        Mockito.when(seatRepo.deleteBySeatNumberAndTripId("B3", 1)).thenReturn(seat);
-
-        Seat deletedSeat = seatService.deleteBySeatNumberAndTripId("B3", 1);
-
-        assertEquals(seat.getSeatNumber(), deletedSeat.getSeatNumber());
-        assertEquals(seat.getTrip(), deletedSeat.getTrip());
-        verify(seatRepo, times(1)).deleteBySeatNumberAndTripId("B3", 1);       
+        Mockito.doNothing().when(seatRepo).deleteBySeatNumberAndTripId("B3", 1);
+        seatService.deleteBySeatNumberAndTripId("B3", 1);
+        
+        verify(seatRepo, times(1)).deleteBySeatNumberAndTripId("B3", 1);   
     }
 
     @Test
