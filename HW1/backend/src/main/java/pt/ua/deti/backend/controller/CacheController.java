@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import pt.ua.deti.backend.service.ExchangeRateApiService;
 import pt.ua.deti.backend.cache.CacheStatistics;
 
 import org.slf4j.LoggerFactory;
@@ -16,6 +15,7 @@ import java.util.Map;
 import java.util.List;
 
 import pt.ua.deti.backend.cache.InMemoryCache;
+import pt.ua.deti.backend.service.ExchangeRateApiService;
 
 @CrossOrigin(origins = "http://localhost:3030")
 @RestController

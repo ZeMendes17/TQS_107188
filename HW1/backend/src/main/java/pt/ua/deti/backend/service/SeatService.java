@@ -22,9 +22,9 @@ public class SeatService {
 
     // methods
     @Transactional
-    public void deleteBySeatNumberAndTripId(String seatNumber, Integer tripId) {
+    public Seat deleteBySeatNumberAndTripId(String seatNumber, Integer tripId) {
         log.info("Deleting seat: {} from trip with id: {}", seatNumber, tripId);
-        seatRepo.deleteBySeatNumberAndTripId(seatNumber, tripId);
+        return seatRepo.deleteBySeatNumberAndTripId(seatNumber, tripId);
     }
 
     public List<Seat> getSeatsByTripId(Integer tripId) {

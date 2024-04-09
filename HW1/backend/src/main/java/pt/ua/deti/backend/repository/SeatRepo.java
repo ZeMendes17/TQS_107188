@@ -9,6 +9,6 @@ import pt.ua.deti.backend.entity.Seat;
 
 @Repository
 public interface SeatRepo extends JpaRepository<Seat, Integer>{
-    void deleteBySeatNumberAndTripId(String seatNumber, Integer tripId);
+    Seat deleteBySeatNumberAndTripId(String seatNumber, Integer tripId);
     List<Seat> findByTripId(Integer tripId);
 }

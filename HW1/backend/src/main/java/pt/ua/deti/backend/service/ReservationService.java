@@ -45,7 +45,6 @@ public class ReservationService {
     public Reservation saveWithToken(String token, String date, User user) {
         log.info("Saving reservation with token: {}, date: {}, user: {}", token, date, user);
         // check if it is possible to make a reservation
-
         String tripCode = token.split("_")[0];
         if (reservations.containsKey(tripCode)) {
             if (reservations.get(tripCode) >= 6) {
