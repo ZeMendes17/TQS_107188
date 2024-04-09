@@ -5,6 +5,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import pt.ua.deti.backend.service.ExchangeRateApiService;
+
 import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -15,8 +17,6 @@ import static org.mockito.Mockito.times;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import org.springframework.http.MediaType;
-
-import pt.ua.deti.backend.service.ExchangeRateApiService;
 
 @WebMvcTest(ExchangeRateController.class)
 class ExchangeRateControllerTest {

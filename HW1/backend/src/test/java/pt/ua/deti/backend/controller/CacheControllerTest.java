@@ -7,8 +7,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import pt.ua.deti.backend.service.ExchangeRateApiService;
 import pt.ua.deti.backend.cache.InMemoryCache;
+import pt.ua.deti.backend.service.ExchangeRateApiService;
 import pt.ua.deti.backend.cache.CacheStatistics;
 
 import java.util.Map;

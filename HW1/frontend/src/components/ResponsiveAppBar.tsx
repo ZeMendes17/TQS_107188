@@ -82,7 +82,7 @@ export default function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            Book a Bus Trip
+            TicketTrack Bus
           </Typography>
         </Toolbar>
       </Container>
