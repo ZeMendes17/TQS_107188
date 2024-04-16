@@ -1,6 +1,6 @@
 CREATE TABLE books (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL.
-    date DATE NOT NULL
+    id                  SERIAL          NOT NULL PRIMARY KEY,
+    title               VARCHAR(255)    NOT NULL,
+    author              VARCHAR(255)    NOT NULL,
+    year                Int             NOT NULL
 );

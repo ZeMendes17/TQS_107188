@@ -1,5 +1,7 @@
 package pt.ua.deti.lab7_3testContainers;
 
+import org.junit.After;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.junit.jupiter.Testcontainers;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import pt.ua.deti.lab7_3testContainers.repository.BookRepo;
 
@@ -15,19 +20,19 @@ import org.testcontainers.containers.PostgreSQLContainer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.Date;
 import java.util.List;
 
 import pt.ua.deti.lab7_3testContainers.model.Book;
 
 @Testcontainers
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ApplicationTests {
     
     // Prepare the PostgreSQL Database
     @Container
-    public static PostgreSQLContainer container = new PostgreSQLContainer()
-        .withDatabaseName("test")
+    public static PostgreSQLContainer container = new PostgreSQLContainer("postgres:13.2")
+        .withDatabaseName("books")
         .withUsername("user")
         .withPassword("password");
 
@@ -41,27 +46,26 @@ public class ApplicationTests {
         registry.add("spring.datasource.username", container::getUsername);
     }
 
-    // Insert some content
-    // @BeforeAll
-    // public static void setup() {
-    //     bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
-    //     bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
-    // }
+    @AfterEach
+    public void clean() {
+        bookRepo.deleteAll();
+    }
 
-    // Read it back
     @Test
+    @Order(1)
     public void allBooksTest() {
-        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
-        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", 2012));
+        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", 2014));
 
         List<Book> books = bookRepo.findAll();
         assertEquals(2, books.size());
     }
 
     @Test
+    @Order(2)
     public void findBookByTitleTest() {
-        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
-        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", 2012));
+        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", 2014));
 
         List<Book> books = bookRepo.findByTitle("The Hobbit");
         assertEquals(1, books.size());
@@ -70,9 +74,10 @@ public class ApplicationTests {
     }
 
     @Test
+    @Order(3)
     public void findBookByAuthorTest() {
-        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", new Date()));
-        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", new Date()));
+        bookRepo.save(new Book("The Hobbit", "J.R.R. Tolkien", 2012));
+        bookRepo.save(new Book("The Lord of the Rings", "J.R.R. Tolkien", 2014));
 
         List<Book> books = bookRepo.findByAuthor("J.R.R. Tolkien");
         assertEquals(2, books.size());

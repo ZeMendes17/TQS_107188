@@ -1,7 +1,5 @@
 package pt.ua.deti.lab7_3testContainers.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,17 +20,17 @@ public class Book {
     @Column(name = "author", nullable = false)
     private String author;
 
-    @Column(name = "isbn", nullable = false)
-    private Date publicationDate;
+    @Column(name = "year", nullable = false)
+    private Integer year;
 
     // Constructors
     public Book() {
     }
 
-    public Book(String title, String author, Date publicationDate) {
+    public Book(String title, String author, Integer year) {
         this.title = title;
         this.author = author;
-        this.publicationDate = publicationDate;
+        this.year = year;
     }
 
     // Getters and Setters
@@ -48,8 +46,8 @@ public class Book {
         return author;
     }
 
-    public Date getPublicationDate() {
-        return publicationDate;
+    public Integer getyear() {
+        return year;
     }
 
     public void setTitle(String title) {
@@ -60,13 +58,13 @@ public class Book {
         this.author = author;
     }
 
-    public void setPublicationDate(Date publicationDate) {
-        this.publicationDate = publicationDate;
+    public void setyear(Integer year) {
+        this.year = year;
     }
 
     // toString
     @Override
     public String toString() {
-        return "Book [author=" + author + ", id=" + id + ", publicationDate=" + publicationDate + ", title=" + title + "]";
+        return "Book [author=" + author + ", id=" + id + ", year=" + year + ", title=" + title + "]";
     }
 }
